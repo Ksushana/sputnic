@@ -1,0 +1,56 @@
+.sputnik-header {
+  padding: 10px 20px;
+  .row {
+    margin: 0;
+  }
+
+  .logotype-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-text;
+  }
+
+  .logotype-wrapper {
+    margin: 0;
+
+  }
+
+  .logotype-text {
+    padding: 0;
+  }
+
+  .catalog-menu-wrapper {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-right: auto;
+  }
+
+
+
+  .catalog-menu {
+    display: flex;
+    background-color: transparent;
+    list-style: none;
+    border: none;
+    width: auto;
+    box-shadow: none;
+    margin-bottom: 0;
+    padding-left: 2px;
+
+    li {
+      color: $color-text;
+      margin-bottom: 0;
+    }
+
+  }
+
+  .catalog-menu-item.level-1 {
+    margin-right: 4px;
+  }
+
+  .shopcart-widget-wrapper {
+    color: #D2D2D2;
+  }
+}

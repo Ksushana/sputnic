@@ -1,0 +1,11 @@
+/* Vendor */
+@import "vendor/normalize";
+/* General */
+@import "general/variables";
+@import "general/mixins";
+@import "general/fonts";
+@import "general/global";
+/* Blocks */
+@import "Blocks/header";
+@import "Blocks/main-page";
+@import "Blocks/footer";

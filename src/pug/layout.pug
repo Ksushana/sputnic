@@ -1,0 +1,62 @@
+block variables
+- let mainTitle = "Sputnik";
+
+doctype html
+html( lang="ru" )
+  head
+    meta( charset="UTF-8" )
+    title #{mainTitle} !{title && "| " + title}
+    meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+    link( rel="preload" href="fonts/FavoritPro-Regular.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="stylesheet" href="css/style.min.css" )
+
+  body
+    header.sputnik-header
+      .row.flex-center-sm.flex-middle
+        .logotype-wrapper
+          .logotype.text-center-sm
+            a.logotype-link(title='Sputnik' href='/')
+              span.logotype-text (SPUTNIK)
+        .catalog-menu-wrapper
+          ul.catalog-menu
+            li.catalog-menu-item.menu-item.level-1
+              a( target="blank" title="КОЛЛЕКЦИЯ" href="collection.html/") КОЛЛЕКЦИЯ
+            li.catalog-menu-item.menu-item.level-1
+              a( target="blank" title="ПРОЕКТЫ" href="/projects.html") ПРОЕКТЫ
+            li.catalog-menu-item.menu-item.level-1
+              a( target="blank" title="БРЕНД" href="/brand.html") БРЕНД
+
+        .shopcart-widget-wrapper
+          span (
+          span.logotype-text 0
+          span )
+
+
+
+    main
+      block content
+
+    footer
+      .footer.sputnik-footer
+        .row.flex-center-sm.flex-middle
+          .footer-lang
+            a(href="/en") EN
+            a(href="/ru" aria-current="page") RU
+          .footer-menu-wrapper
+            ul.footer-menu
+              li.footer-menu-item
+                a( target="blank" title="контакты" href="./contacts.html") контакты
+              li.footer-menu-item
+                a( target="blank" title="ИНФОРМАЦИЯ" href="./information.html") ИНФОРМАЦИЯ
+              li.footer-menu-item
+                a( target="blank" title="корпоративные заказы" href="./corporate-orders.html") корпоративные заказы
+          .social-menu-item
+            ul.social-menu
+              li.social-menu-item
+                a.social-menu-link( target="blank" title="instagram" href="http://instagram.com/") instagram
+              li.social-menu-item
+                a.social-menu-link( target="blank" title="facebook" href="http://facebook.com/") facebook
+
+
+    block scripts
+      script( src="js/script.min.js" )
