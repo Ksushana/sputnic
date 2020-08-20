@@ -1,0 +1,29 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Контакты';
+  - let isContacts = true;
+
+
+block content
+  .container
+    .contacts
+      .contacts__container
+        .contacts__block.contacts__block--social
+          h2 (СОЦИАЛЬНЫЕ СЕТИ)
+          ul
+            li
+              a.big-text(href="#") INSTAGRAM
+            li
+              a.big-text(href="#") FACEBOOK
+            li
+              a.big-text(href="#") VK
+        .contacts__block.contacts__block--buyer
+          h2 (ПОКУПАТЕЛЯМ)
+          a.big-text(href="emailto:HELLO@SPUTNIK-BAGS.RU") HELLO@SPUTNIK-BAGS.RU
+        .contacts__block.contacts__block--corporate
+          h2 (КОРПОРАТИВНЫЕ ЗАКАЗЫ)
+          a.big-text(href="emailto:WHITELABEL@SPUTNIK-BAGS.RU") WHITELABEL@SPUTNIK-BAGS.RU
+        .contacts__block.contacts__block--purchase
+          h2 (ЗАКУПКИ)
+          a.big-text(href="emailto:WHOLESALE@SPUTNIK-BAGS.RU") WHOLESALE@SPUTNIK-BAGS.RU

@@ -36,13 +36,8 @@
 
       margin-bottom: 0;
 
-      a {
+      a:not(.active-link) {
         opacity: 0.4;
-      }
-
-      .active-link {
-        opacity: 1;
-        pointer-events: none;
       }
     }
 

@@ -15,7 +15,7 @@ html( lang="ru" )
       .row.flex-center-sm.flex-middle
         .logotype-wrapper
           .logotype.text-center-sm
-            a.logotype-link(title='Sputnik' href='')
+            a.logotype-link(title='Sputnik' href=(isMain ? null : '/main-page.html'))
               span.logotype-text (SPUTNIK)
         .catalog-menu-wrapper(class=(isMenuHide ? 'menu-hide' : null))
           ul.catalog-menu
@@ -25,14 +25,17 @@ html( lang="ru" )
               a( target="blank" title="ПРОЕКТЫ" href="/projects.html" class=(isProjects ? 'active-link' : null)) ПРОЕКТЫ
             li.catalog-menu-item.menu-item.level-1
               a( target="blank" title="БРЕНД" href="/brand.html" class=(isBrand ? 'active-link' : null)) БРЕНД
-          .sub-menu(class=(isProject ? 'collection-name' : 'visually-hidden'))
+          .sub-menu(class=(isProject ? 'collection-name' : 'display-none'))
             span Liars Collective
 
-          .sub-menu(class=(isBrand ? 'brand-list' : 'visually-hidden'))
+          .sub-menu(class=(isBrand ? 'brand-list' : 'display-none'))
             a.active-link(href="#") КОНЦЕПЦИЯ
             a(href="#history") ИСТОРИЯ
             a(href="#team") КОМАНДА
             a(href="#page") САЙТ
+
+          .sub-menu(class=(isProduct ? 'product-name' : 'display-none'))
+            span РЮКЗАК (КОЛХАС)
 
 
         .shopcart-widget-wrapper
@@ -54,7 +57,7 @@ html( lang="ru" )
           .footer-menu-wrapper
             ul.footer-menu
               li.footer-menu-item
-                a( target="blank" title="контакты" href="./contacts.html") контакты
+                a( target="blank" title="контакты" href="./contacts.html" class=(isContacts ? 'active-link' : null)) контакты
               li.footer-menu-item
                 a( target="blank" title="ИНФОРМАЦИЯ" href="./information.html") ИНФОРМАЦИЯ
               li.footer-menu-item

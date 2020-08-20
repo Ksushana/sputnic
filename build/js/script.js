@@ -62,9 +62,16 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
 })();
 
 (function () {
+  var mySwiper = new Swiper('.product__slider', {
+    speed: 400,
+    slidesPerView: 1,
+    spaceBetween: 20,
+  });
+})();
+
+(function () {
   var mySwiper = new Swiper('.project__slider', {
     speed: 400,
-    spaceBetween: 100,
     slidesPerView: "auto",
     spaceBetween: 20,
     navigation: {
@@ -75,3 +82,6 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
 })();
 
 var scroll = new SmoothScroll('a[href*="#"]');
+// $( function() {
+//   $( ".product__content" ).tabs();
+// } );

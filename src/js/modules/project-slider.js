@@ -1,7 +1,6 @@
 (function () {
   var mySwiper = new Swiper('.project__slider', {
     speed: 400,
-    spaceBetween: 100,
     slidesPerView: "auto",
     spaceBetween: 20,
     navigation: {

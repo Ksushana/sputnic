@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Sputnik | Sputnik</title>
+  <title>Sputnik | Контакты</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="fonts/FavoritPro-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
@@ -13,7 +13,7 @@
   <header class="sputnik-header">
     <div class="row flex-center-sm flex-middle">
       <div class="logotype-wrapper">
-        <div class="logotype text-center-sm"><a class="logotype-link" title="Sputnik"><span class="logotype-text">(SPUTNIK)</span></a></div>
+        <div class="logotype text-center-sm"><a class="logotype-link" title="Sputnik" href="/main-page.html"><span class="logotype-text">(SPUTNIK)</span></a></div>
       </div>
       <div class="catalog-menu-wrapper">
         <ul class="catalog-menu">
@@ -30,9 +30,26 @@
   </header>
   <main>
     <div class="container">
-      <div class="main-page">
-        <div class="main-page__photo"><img src="img/main@1x.jpg" srcset="img/main@2x.jpg 2x" alt="главная"></div>
-        <div class="main-page__photo"><img src="img/main-bag@1x.jpg" srcset="img/main-bag@2x.jpg 2x" alt="главная"></div>
+      <div class="contacts">
+        <div class="contacts__container">
+          <div class="contacts__block contacts__block--social">
+            <h2>(СОЦИАЛЬНЫЕ СЕТИ)</h2>
+            <ul>
+              <li><a class="big-text" href="#">INSTAGRAM</a></li>
+              <li><a class="big-text" href="#">FACEBOOK</a></li>
+              <li><a class="big-text" href="#">VK</a></li>
+            </ul>
+          </div>
+          <div class="contacts__block contacts__block--buyer">
+            <h2>(ПОКУПАТЕЛЯМ)</h2><a class="big-text" href="emailto:HELLO@SPUTNIK-BAGS.RU">HELLO@SPUTNIK-BAGS.RU</a>
+          </div>
+          <div class="contacts__block contacts__block--corporate">
+            <h2>(КОРПОРАТИВНЫЕ ЗАКАЗЫ)</h2><a class="big-text" href="emailto:WHITELABEL@SPUTNIK-BAGS.RU">WHITELABEL@SPUTNIK-BAGS.RU</a>
+          </div>
+          <div class="contacts__block contacts__block--purchase">
+            <h2>(ЗАКУПКИ)</h2><a class="big-text" href="emailto:WHOLESALE@SPUTNIK-BAGS.RU">WHOLESALE@SPUTNIK-BAGS.RU</a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -42,7 +59,7 @@
         <div class="footer-lang"><a href="/en">EN</a><a href="/ru" aria-current="page">RU</a></div>
         <div class="footer-menu-wrapper">
           <ul class="footer-menu">
-            <li class="footer-menu-item"><a target="blank" title="контакты" href="./contacts.html">контакты</a></li>
+            <li class="footer-menu-item"><a class="active-link" target="blank" title="контакты" href="./contacts.html">контакты</a></li>
             <li class="footer-menu-item"><a target="blank" title="ИНФОРМАЦИЯ" href="./information.html">ИНФОРМАЦИЯ</a></li>
             <li class="footer-menu-item"><a target="blank" title="корпоративные заказы" href="./corporate-orders.html">корпоративные заказы</a></li>
           </ul>
