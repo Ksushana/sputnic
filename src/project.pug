@@ -1,0 +1,49 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Project';
+  - let isProject = true;
+  - let isMenuHide = true;
+
+
+block content
+  .container
+    .project
+      .project-text.big-text
+        | Мы разработали совместную коллекцию с Liars Collective, чтобы сделать классную коллаборацию, очень крутую и неожиданную, а&nbsp;этот текст может быть любой длины, а фотки снизу расположены на расстоянии 50 пикселей вниз от текста.
+      .swiper-container.project__slider
+        .swiper-wrapper
+          .swiper-slide
+            img(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект")
+            .collection-item__info.row.flex-between.row.flex-between
+              span 01
+              span /08
+          .swiper-slide
+            img(src="img/collection1@1x.jpg" srcset="img/collection1@2x.jpg 2x", alt="проект")
+            .collection-item__info.row.flex-between.row.flex-between
+              span 02
+              span /08
+          .swiper-slide
+            img(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект")
+            .collection-item__info.row.flex-between.row.flex-between
+              span 03
+              span /08
+          .swiper-slide
+            img(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект")
+            .collection-item__info.row.flex-between.row.flex-between
+              span 04
+              span /08
+          .swiper-slide
+            img(src="img/collection1@1x.jpg" srcset="img/collection1@2x.jpg 2x", alt="проект")
+            .collection-item__info.row.flex-between.row.flex-between
+              span 05
+              span /08
+          .swiper-slide
+            img(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект")
+            .collection-item__info.row.flex-between.row.flex-between
+              span 06
+              span /08
+
+
+        .swiper-button-prev
+        .swiper-button-next

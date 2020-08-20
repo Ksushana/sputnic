@@ -1,0 +1,60 @@
+.brand-list {
+  margin-left: 10px;
+  a   {
+    margin-right: 12px;
+    opacity: 0.4;
+    transition: opacity 0.4s;
+
+    &.active-link {
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.brand {
+  margin-top: -3px;
+  margin-bottom: 10px;
+
+  .brand__photo {
+    width: 100%;
+    height: auto;
+    margin-top: 46px;
+    margin-bottom: 50px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+  }
+
+  .brand__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0;
+    grid-column-gap: 177px;
+
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0 178px 50px;
+
+    h2 {
+      font-size: 16px;
+      line-height: 19px;
+      padding-left: 68%;
+      font-weight: normal;
+    }
+
+    .brand__text p {
+      margin-bottom: 19px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

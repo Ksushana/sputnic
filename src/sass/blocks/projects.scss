@@ -1,0 +1,58 @@
+.projects {
+  padding-top: 28px;
+  padding-bottom: 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 150px;
+  grid-column-gap: 20px;
+
+  .row {
+    margin: 0;
+  }
+
+  .projects-item {
+    grid-area: span 1;
+
+    span:first-child {
+      margin-left: 6px;
+    }
+  }
+}
+
+.project {
+  margin-top: 5px;
+
+  .row {
+    margin: 0;
+    font-size: 16px;
+    line-height: 19px;
+    font-feature-settings: 'ss04' on, 'case' on;
+    color: #D2D2D2;
+  }
+
+  .project__slider {
+    margin-top: 52px;
+  }
+
+  .swiper-slide {
+    height: 709px;
+    width: auto;
+
+    img {
+      height: 680px;
+    }
+  }
+
+  .collection-item__info {
+    margin-top: 11px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 100%;
+    top: 0;
+    width: 50%;
+    background-image: none;
+    outline: none;
+  }
+}

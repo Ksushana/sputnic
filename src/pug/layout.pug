@@ -15,16 +15,25 @@ html( lang="ru" )
       .row.flex-center-sm.flex-middle
         .logotype-wrapper
           .logotype.text-center-sm
-            a.logotype-link(title='Sputnik' href='/')
+            a.logotype-link(title='Sputnik' href='')
               span.logotype-text (SPUTNIK)
-        .catalog-menu-wrapper
+        .catalog-menu-wrapper(class=(isMenuHide ? 'menu-hide' : null))
           ul.catalog-menu
             li.catalog-menu-item.menu-item.level-1
-              a( target="blank" title="КОЛЛЕКЦИЯ" href="collection.html/") КОЛЛЕКЦИЯ
+              a( target="blank" title="КОЛЛЕКЦИЯ" href="/collection.html" class=(isCollection ? 'active-link' : null)) КОЛЛЕКЦИЯ
             li.catalog-menu-item.menu-item.level-1
-              a( target="blank" title="ПРОЕКТЫ" href="/projects.html") ПРОЕКТЫ
+              a( target="blank" title="ПРОЕКТЫ" href="/projects.html" class=(isProjects ? 'active-link' : null)) ПРОЕКТЫ
             li.catalog-menu-item.menu-item.level-1
-              a( target="blank" title="БРЕНД" href="/brand.html") БРЕНД
+              a( target="blank" title="БРЕНД" href="/brand.html" class=(isBrand ? 'active-link' : null)) БРЕНД
+          .sub-menu(class=(isProject ? 'collection-name' : 'visually-hidden'))
+            span Liars Collective
+
+          .sub-menu(class=(isBrand ? 'brand-list' : 'visually-hidden'))
+            a.active-link(href="#") КОНЦЕПЦИЯ
+            a(href="#history") ИСТОРИЯ
+            a(href="#team") КОМАНДА
+            a(href="#page") САЙТ
+
 
         .shopcart-widget-wrapper
           span (

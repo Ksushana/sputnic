@@ -2,6 +2,7 @@
   padding: 10px 20px;
   .row {
     margin: 0;
+    align-items: flex-start;
   }
 
   .logotype-link {
@@ -20,15 +21,6 @@
     padding: 0;
   }
 
-  .catalog-menu-wrapper {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    margin-right: auto;
-  }
-
-
-
   .catalog-menu {
     display: flex;
     background-color: transparent;
@@ -41,9 +33,58 @@
 
     li {
       color: $color-text;
+
       margin-bottom: 0;
+
+      a {
+        opacity: 0.4;
+      }
+
+      .active-link {
+        opacity: 1;
+        pointer-events: none;
+      }
     }
 
+  }
+
+  .catalog-menu-wrapper {
+    margin: 0;
+    padding: 10px 0;
+    margin-top: -10px;
+    border: 0;
+    margin-right: auto;
+
+    &.menu-hide {
+      transform: translateY(-18px);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(1px);
+      }
+    }
+  }
+
+  .sub-menu {
+    text-transform: uppercase;
+    padding-top: 3px;
+
+    position: relative;
+  }
+
+
+
+  .collection-name {
+    text-transform: uppercase;
+    padding-top: 3px;
+    margin-left: 23px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "+";
+      left: -13px;
+    }
   }
 
   .catalog-menu-item.level-1 {
