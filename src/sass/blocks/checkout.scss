@@ -27,7 +27,8 @@
       width: 48%;
     }
 
-    input {
+    input,
+    select {
       border: 0;
       border-bottom: 1px solid #302D2D;
       outline: none;
@@ -35,6 +36,8 @@
       line-height: 52px;
       background-color: transparent;
       margin-bottom: 32px;
+      padding: 0;
+      border-radius: 0;
     }
 
     label {
@@ -47,7 +50,8 @@
     }
 
     input:focus ~ label,
-    input.filled ~ label {
+    input.filled ~ label,
+    select ~ label {
       font-size: 16px;
       line-height: 19px;
       top: 17px;

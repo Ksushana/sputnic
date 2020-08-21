@@ -14668,7 +14668,8 @@ input.co-input-field {
   width: 48%;
 }
 
-.checkout__input input {
+.checkout__input input,
+.checkout__input select {
   border: 0;
   border-bottom: 1px solid #302D2D;
   outline: none;
@@ -14676,6 +14677,8 @@ input.co-input-field {
   line-height: 52px;
   background-color: transparent;
   margin-bottom: 32px;
+  padding: 0;
+  border-radius: 0;
 }
 
 .checkout__input label {
@@ -14689,7 +14692,8 @@ input.co-input-field {
 }
 
 .checkout__input input:focus ~ label,
-.checkout__input input.filled ~ label {
+.checkout__input input.filled ~ label,
+.checkout__input select ~ label {
   font-size: 16px;
   line-height: 19px;
   top: 17px;
