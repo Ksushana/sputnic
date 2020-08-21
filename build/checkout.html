@@ -35,7 +35,7 @@
           <div class="checkout__inputs">
             <div class="checkout__input checkout__input--email"><input class="form__input" type="email" id="email"><label for="email">Ваш имейл</label></div>
             <div class="checkout__input checkout__input--name"><input class="form__input" type="text" id="name"><label for="name">Ваше имя</label></div>
-            <div class="checkout__input checkout__input--country"><select class="form__input" id="country">
+            <div class="checkout__input checkout__input--country"><select class="form__input form__select" id="country">
                 <option value="Австралия">Австралия</option>
                 <option value="Австрия">Австрия</option>
                 <option value="Азербайджан">Азербайджан</option>
@@ -61,7 +61,6 @@
                 <option value="Бермуды">Бермуды</option>
                 <option value="Болгария">Болгария</option>
                 <option value="Боливия">Боливия</option>
-                <option value="Бонайре, Синт-Эстатиус и Саба">Бонайре, Синт-Эстатиус и Саба</option>
                 <option value="Босния и Герцеговина">Босния и Герцеговина</option>
                 <option value="Ботсвана">Ботсвана</option>
                 <option value="Бразилия">Бразилия</option>
@@ -74,8 +73,6 @@
                 <option value="Великобритания">Великобритания</option>
                 <option value="Венгрия">Венгрия</option>
                 <option value="Венесуэла">Венесуэла</option>
-                <option value="Виргинские острова, Британские">Виргинские острова, Британские</option>
-                <option value="Виргинские острова, США">Виргинские острова, США</option>
                 <option value="Восточный Тимор">Восточный Тимор</option>
                 <option value="Вьетнам">Вьетнам</option>
                 <option value="Габон">Габон</option>
@@ -128,7 +125,7 @@
                 <option value="Колумбия">Колумбия</option>
                 <option value="Коморы">Коморы</option>
                 <option value="Конго">Конго</option>
-                <option value="Конго, демократическая республика">Конго, демократическая республика</option>
+                <option value="Конго, демократическая республика">Конго</option>
                 <option value="Коста-Рика">Коста-Рика</option>
                 <option value="Кот д`Ивуар">Кот д`Ивуар</option>
                 <option value="Куба">Куба</option>
@@ -158,7 +155,7 @@
                 <option value="Мартиника">Мартиника</option>
                 <option value="Маршалловы Острова">Маршалловы Острова</option>
                 <option value="Мексика">Мексика</option>
-                <option value="Микронезия, федеративные штаты">Микронезия, федеративные штаты</option>
+                <option value="Микронезия, федеративные штаты">Микронезия</option>
                 <option value="Мозамбик">Мозамбик</option>
                 <option value="Молдова">Молдова</option>
                 <option value="Монако">Монако</option>
@@ -176,7 +173,7 @@
                 <option value="Новая Зеландия">Новая Зеландия</option>
                 <option value="Новая Каледония">Новая Каледония</option>
                 <option value="Норвегия">Норвегия</option>
-                <option value="Объединенные Арабские Эмираты">Объединенные Арабские Эмираты</option>
+                <option value="Объединенные Арабские Эмираты">ОАЭ</option>
                 <option value="Оман">Оман</option>
                 <option value="Остров Мэн">Остров Мэн</option>
                 <option value="Остров Норфолк">Остров Норфолк</option>
@@ -207,7 +204,6 @@
                 <option value="Свазиленд">Свазиленд</option>
                 <option value="Святая Елена">Святая Елена</option>
                 <option value="Северная Корея">Северная Корея</option>
-                <option value="Северные Марианские острова">Северные Марианские острова</option>
                 <option value="Сейшелы">Сейшелы</option>
                 <option value="Сенегал">Сенегал</option>
                 <option value="Сент-Винсент">Сент-Винсент</option>
@@ -217,7 +213,6 @@
                 <option value="Сербия">Сербия</option>
                 <option value="Сингапур">Сингапур</option>
                 <option value="Синт-Мартен">Синт-Мартен</option>
-                <option value="Сирийская Арабская Республика">Сирийская Арабская Республика</option>
                 <option value="Словакия">Словакия</option>
                 <option value="Словения">Словения</option>
                 <option value="Соломоновы Острова">Соломоновы Острова</option>
@@ -251,7 +246,6 @@
                 <option value="Французская Гвиана">Французская Гвиана</option>
                 <option value="Французская Полинезия">Французская Полинезия</option>
                 <option value="Хорватия">Хорватия</option>
-                <option value="Центрально-Африканская Республика">Центрально-Африканская Республика</option>
                 <option value="Чад">Чад</option>
                 <option value="Черногория">Черногория</option>
                 <option value="Чехия">Чехия</option>
@@ -266,16 +260,15 @@
                 <option value="Эстония">Эстония</option>
                 <option value="Эфиопия">Эфиопия</option>
                 <option value="Южная Корея">Южная Корея</option>
-                <option value="Южно-Африканская Республика">Южно-Африканская Республика</option>
                 <option value="Южный Судан">Южный Судан</option>
                 <option value="Ямайка">Ямайка</option>
                 <option value="Япония">Япония</option>
               </select><label for="country">Страна</label></div>
             <div class="checkout__input checkout__input--city"><input class="form__input" type="text" id="city"><label for="city">Город</label></div>
             <div class="checkout__input checkout__input--address"><input class="form__input" type="text" id="address"><label for="address">Ваш адрес</label></div>
-            <div class="checkout__input checkout__input--flat"><input class="form__input" type="text" id="flat"><label for="flat">№ квартиры</label></div>
-            <div class="checkout__input checkout__input--zip"><input class="form__input" type="text" id="zip"><label for="zip">Ваш индекс</label></div>
-            <div class="checkout__input checkout__input--phone"><input class="form__input" type="tel" id="phone"><label for="phone">Ваш телефон</label></div>
+            <div class="checkout__input checkout__input--flat"><input class="only-number form__input" type="text" id="flat" pattern="^[ 0-9]+$"><label for="flat">№ квартиры</label></div>
+            <div class="checkout__input checkout__input--zip"><input class="only-number form__input" type="text" id="zip" pattern="^[ 0-9]+$"><label for="zip">Ваш индекс</label></div>
+            <div class="checkout__input checkout__input--phone"><input class="only-number form__input" type="tel" id="phone" pattern="^[ 0-9]+$"><label for="phone">Ваш телефон</label></div>
           </div>
           <div class="checkout__summary">
             <div class="checkout__product-list">

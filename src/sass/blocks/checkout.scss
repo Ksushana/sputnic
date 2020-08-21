@@ -27,8 +27,12 @@
       width: 48%;
     }
 
+    .select2 {
+      height: 61px;
+    }
+
     input,
-    select {
+    .select2-container {
       border: 0;
       border-bottom: 1px solid #302D2D;
       outline: none;
@@ -38,6 +42,26 @@
       margin-bottom: 32px;
       padding: 0;
       border-radius: 0;
+      max-width: 611px;
+    }
+
+    .select2-selection {
+      background-color: transparent;
+      border: none;
+      height: auto;
+      outline: none;
+    }
+
+
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      color: #302D2D;;
+      line-height: 64px;
+      padding-left: 0;
+    }
+
+    .select2-selection__arrow {
+      display: none;
     }
 
     label {
@@ -58,6 +82,8 @@
       transition-property: top, font-size, line-height;
     }
   }
+
+
 
   &__summary {
     display: flex;
@@ -124,4 +150,8 @@
       }
     }
   }
+}
+
+.select2-search--dropdown {
+  display: none;
 }
