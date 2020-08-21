@@ -141,13 +141,15 @@
       }
     }
 
-    input:not(:checked) + label {
-      color: #D2D2D2;
-    }
-
-    input + label {
+    label.black {
       color: #302D2D;
     }
+
+    input:checked + label {
+      color: #302D2D;
+      pointer-events: none;
+    }
+
   }
 
   &__form-button {

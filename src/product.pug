@@ -47,15 +47,16 @@ block content
                   .product__slide-info.row.flex-between.row.flex-between
                     span 01
                     span /04
-
+            .swiper-button-prev
+            .swiper-button-next
         .product__info
           .product__name Роллтоп (КОЛХАС)
           .product__add-to-cart
             form(action="post")
               .product__inputs
-                input( type="radio" id="black" name="color" value="black" )
+                input.radio( type="radio" id="black" name="color" value="black")
                 label( for="black" ) ЧЁРНЫЙ
-                input( type="radio" id="grey" name="color" value="grey" )
+                input.radio( type="radio" id="grey" name="color" value="grey" )
                 label( for="grey" ) СЕРЫЙ
                 span.product__price 1000₽
               .product__form-button

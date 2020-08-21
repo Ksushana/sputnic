@@ -82,6 +82,7 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
     }
   };
 
+
   document.addEventListener(`blur`, toggleInput, true);
   document.addEventListener(`input`, toggleInput, true);
 })();
@@ -91,6 +92,10 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
     speed: 400,
     slidesPerView: 1,
     spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 })();
 
@@ -106,7 +111,30 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
   });
 })();
 
+  $('.product').ready ( function(){
+    $('.product__inputs label').addClass('black')
+
+  });​
+
+
+
+
+
+
 var scroll = new SmoothScroll('a[href*="#"]');
+// (() => {
+//   let inputBlocks = document.querySelectorAll(`checkout__input`);
+//   let inputs = document.querySelectorAll(`form__input`);
+
+
+//   const showNextInput = () => {
+//     for (var i = 0; i < inputBlocks.length; i++) {
+
+//     }
+//   };
+
+// })();
+
 // $( function() {
 //   $( ".product__content" ).tabs();
 // } );

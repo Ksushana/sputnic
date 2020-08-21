@@ -1,0 +1,15 @@
+.swiper-button-next {
+  cursor: url('./../img/cursor.png') 17 15, auto;
+}
+.swiper-button-prev {
+  cursor: url('./../img/cursor-prev.png') 17 15, auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  height: 100%;
+  top: 0;
+  width: 50%;
+  background-image: none;
+  outline: none;
+}

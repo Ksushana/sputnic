@@ -48,5 +48,6 @@
 
   .two-2 {
     grid-column: 2 / 4;
+    height: calc(100vh - 28px);
   }
 }

@@ -19,6 +19,7 @@
     }
   };
 
+
   document.addEventListener(`blur`, toggleInput, true);
   document.addEventListener(`input`, toggleInput, true);
 })();

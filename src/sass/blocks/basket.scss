@@ -30,7 +30,16 @@
 
   .item-caption {
     flex: 1 1 auto;
-}
+  }
+
+  .item-title {
+    transition: opacity 0.3s;
+  }
+
+  .item-title:hover {
+    color: unset;
+    opacity: 0.6;
+  }
 
   .item-counter {
     padding: 0;
@@ -101,6 +110,10 @@
   .item-delete {
     button {
       padding: 0;
+
+      &:hover {
+        background-color: transparent;
+      }
 
       &::after {
         display: none;

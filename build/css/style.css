@@ -430,7 +430,7 @@ a {
 
 .container {
   position: relative;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 82px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13780,15 +13780,15 @@ input.co-input-field {
 
 .sputnik-header .catalog-menu-wrapper {
   margin: 0;
-  padding: 10px 0;
+  padding: 11px 0;
   margin-top: -10px;
   border: 0;
   margin-right: auto;
 }
 
 .sputnik-header .catalog-menu-wrapper.menu-hide {
-  -webkit-transform: translateY(-18px);
-          transform: translateY(-18px);
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -13796,13 +13796,13 @@ input.co-input-field {
 }
 
 .sputnik-header .catalog-menu-wrapper.menu-hide:hover {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .sputnik-header .sub-menu {
   text-transform: uppercase;
-  padding-top: 3px;
+  padding-top: 2px;
   position: relative;
 }
 
@@ -13838,6 +13838,9 @@ input.co-input-field {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  max-height: calc( 100vh - 82px);
+  -o-object-position: center;
+     object-position: center;
 }
 
 .sputnik-footer {
@@ -13971,6 +13974,7 @@ input.co-input-field {
 
 .collection .two-2 {
   grid-column: 2 / 4;
+  height: calc(100vh - 28px);
 }
 
 .projects {
@@ -14024,15 +14028,6 @@ input.co-input-field {
   margin-top: 11px;
 }
 
-.project .swiper-button-prev,
-.project .swiper-button-next {
-  height: 100%;
-  top: 0;
-  width: 50%;
-  background-image: none;
-  outline: none;
-}
-
 .brand-list {
   margin-left: 10px;
 }
@@ -14061,7 +14056,6 @@ input.co-input-field {
   width: 100%;
   height: auto;
   margin-top: 46px;
-  margin-bottom: 50px;
 }
 
 .brand ul {
@@ -14071,6 +14065,7 @@ input.co-input-field {
 
 .brand__right-text {
   padding-left: 78px;
+  max-width: 532px;
 }
 
 .brand__right-text p {
@@ -14088,13 +14083,17 @@ input.co-input-field {
   grid-column-gap: 20px;
   font-size: 16px;
   line-height: 19px;
-  padding: 0 178px 50px;
+  margin: 0 auto 50px;
+}
+
+.brand .brand__item:first-child {
+  padding-top: 50px;
 }
 
 .brand .brand__item h2 {
   font-size: 16px;
   line-height: 19px;
-  padding-left: 57.6%;
+  padding-left: 68.6%;
   font-weight: normal;
 }
 
@@ -14267,12 +14266,13 @@ input.co-input-field {
   right: -6px;
 }
 
-.product__inputs input:not(:checked) + label {
-  color: #D2D2D2;
+.product__inputs label.black {
+  color: #302D2D;
 }
 
-.product__inputs input + label {
+.product__inputs input:checked + label {
   color: #302D2D;
+  pointer-events: none;
 }
 
 .product__form-button {
@@ -14459,6 +14459,16 @@ input.co-input-field {
           flex: 1 1 auto;
 }
 
+.cart .item-title {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.cart .item-title:hover {
+  color: unset;
+  opacity: 0.6;
+}
+
 .cart .item-counter {
   padding: 0;
   -webkit-box-flex: unset;
@@ -14532,6 +14542,10 @@ input.co-input-field {
   padding: 0;
 }
 
+.cart .item-delete button:hover {
+  background-color: transparent;
+}
+
 .cart .item-delete button::after {
   display: none;
 }
@@ -14596,6 +14610,10 @@ input.co-input-field {
   top: -10px;
   left: 10px;
   background-color: #302D2D;
+}
+
+.checkout {
+  margin-bottom: 64px;
 }
 
 .checkout form {
@@ -14665,6 +14683,13 @@ input.co-input-field {
 }
 
 .checkout__summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 73px;
 }
 
@@ -14683,4 +14708,60 @@ input.co-input-field {
 
 .checkout__summary tr td:last-child {
   width: 140px;
+}
+
+.checkout__pay {
+  margin-top: auto;
+  margin-bottom: 25px;
+}
+
+.checkout__pay button {
+  width: 100%;
+  height: 72px;
+  font-size: 44px;
+  line-height: 52px;
+  text-align: center;
+  border: 0;
+  outline: none;
+  border-left: 1px solid #302D2D;
+  border-right: 1px solid #302D2D;
+  background-color: transparent;
+  position: relative;
+}
+
+.checkout__pay button::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: calc( 100% - 20px);
+  top: -10px;
+  left: 10px;
+  background-color: #302D2D;
+}
+
+.checkout__pay button::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: calc( 100% - 20px);
+  bottom: -10px;
+  left: 10px;
+  background-color: #302D2D;
+}
+
+.swiper-button-next {
+  cursor: url("./../img/cursor.png") 17 15, auto;
+}
+
+.swiper-button-prev {
+  cursor: url("./../img/cursor-prev.png") 17 15, auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  height: 100%;
+  top: 0;
+  width: 50%;
+  background-image: none;
+  outline: none;
 }
