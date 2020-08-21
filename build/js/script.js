@@ -112,7 +112,9 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
 })();
 
 $(function() {
-
+  $(".radio-label").click(function(){
+    $(".radio-label").addClass("inactive")
+  });
 });
 var scroll = new SmoothScroll('a[href*="#"]');
 // (() => {
