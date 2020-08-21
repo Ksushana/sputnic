@@ -15303,6 +15303,10 @@ input.co-input-field {
   margin-bottom: 64px;
 }
 
+.checkout__product-list {
+  margin-bottom: 50px;
+}
+
 .checkout form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -15313,11 +15317,12 @@ input.co-input-field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .checkout__input {
@@ -15334,6 +15339,14 @@ input.co-input-field {
       -ms-flex-pack: end;
           justify-content: flex-end;
   position: relative;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.checkout__input.visually-hidden {
+  opacity: 0;
 }
 
 .checkout__input--flat, .checkout__input--zip {
@@ -15356,6 +15369,7 @@ input.co-input-field {
   padding: 0;
   border-radius: 0;
   max-width: 611px;
+  width: 100% !important;
 }
 
 .checkout__input .select2-selection {
@@ -15403,10 +15417,14 @@ input.co-input-field {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-top: 73px;
+}
+
+.checkout__summary .opacity {
+  opacity: 0;
 }
 
 .checkout__summary table {
@@ -15426,8 +15444,21 @@ input.co-input-field {
   width: 140px;
 }
 
+.checkout__note {
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+  opacity: 1;
+}
+
+.checkout__note.visually-hidden {
+  opacity: 0;
+}
+
 .checkout__pay {
+  margin-top: auto;
   margin-bottom: 25px;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
 }
 
 .checkout__pay button {
@@ -15442,6 +15473,8 @@ input.co-input-field {
   border-right: 1px solid #302D2D;
   background-color: transparent;
   position: relative;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
 }
 
 .checkout__pay button::before {

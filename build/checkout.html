@@ -34,8 +34,8 @@
         <form action="post">
           <div class="checkout__inputs">
             <div class="checkout__input checkout__input--email"><input class="form__input" type="email" id="email"><label for="email">Ваш имейл</label></div>
-            <div class="checkout__input checkout__input--name"><input class="form__input" type="text" id="name"><label for="name">Ваше имя</label></div>
-            <div class="checkout__input checkout__input--country"><select class="form__input form__select" id="country">
+            <div class="checkout__input checkout__input--name visually-hidden"><input class="form__input" type="text" id="name"><label for="name">Ваше имя</label></div>
+            <div class="checkout__input checkout__input--country visually-hidden"><select class="form__input form__select" id="country">
                 <option value="Австралия">Австралия</option>
                 <option value="Австрия">Австрия</option>
                 <option value="Азербайджан">Азербайджан</option>
@@ -264,11 +264,13 @@
                 <option value="Ямайка">Ямайка</option>
                 <option value="Япония">Япония</option>
               </select><label for="country">Страна</label></div>
-            <div class="checkout__input checkout__input--city"><input class="form__input" type="text" id="city"><label for="city">Город</label></div>
-            <div class="checkout__input checkout__input--address"><input class="form__input" type="text" id="address"><label for="address">Ваш адрес</label></div>
-            <div class="checkout__input checkout__input--flat"><input class="only-number form__input" type="text" id="flat" pattern="^[ 0-9]+$"><label for="flat">№ квартиры</label></div>
-            <div class="checkout__input checkout__input--zip"><input class="only-number form__input" type="text" id="zip" pattern="^[ 0-9]+$"><label for="zip">Ваш индекс</label></div>
-            <div class="checkout__input checkout__input--phone"><input class="only-number form__input" type="tel" id="phone" pattern="^[ 0-9]+$"><label for="phone">Ваш телефон</label></div>
+            <div class="checkout__input checkout__input--city visually-hidden"><input class="form__input" type="text" id="city"><label for="city">Город</label></div>
+            <div class="checkout__input checkout__input--address visually-hidden"><input class="form__input" type="text" id="address"><label for="address">Ваш адрес</label></div>
+            <div class="inputs__horizontal">
+              <div class="checkout__input checkout__input--flat visually-hidden"><input class="only-number form__input" type="text" id="flat" pattern="^[ 0-9]+$"><label for="flat">№ квартиры</label></div>
+              <div class="checkout__input checkout__input--zip visually-hidden"><input class="only-number form__input" type="text" id="zip" pattern="^[ 0-9]+$"><label for="zip">Ваш индекс</label></div>
+            </div>
+            <div class="checkout__input checkout__input--phone visually-hidden"><input class="only-number form__input" type="tel" id="phone" pattern="^[ 0-9]+$"><label for="phone">Ваш телефон</label></div>
           </div>
           <div class="checkout__summary">
             <div class="checkout__product-list">
@@ -295,8 +297,8 @@
                 </tr>
               </table>
             </div>
-            <div class="checkout__note big-text">Мы свяжемся с вами по&nbsp;почте, чтобы обсудить наиболее удобный и&nbsp;быстрый способ доставки, а&nbsp;потом пришлём ссылку для оплаты.</div>
-            <div class="checkout__pay"><button type="submit">→ Оплатить</button></div>
+            <div class="checkout__note big-text opacity">Мы свяжемся с вами по&nbsp;почте, чтобы обсудить наиболее удобный и&nbsp;быстрый способ доставки, а&nbsp;потом пришлём ссылку для оплаты.</div>
+            <div class="checkout__pay opacity"><button type="submit">→ Оплатить</button></div>
           </div>
         </form>
       </div>

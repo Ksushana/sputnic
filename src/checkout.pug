@@ -13,26 +13,27 @@ block content
           .checkout__input.checkout__input--email
             input.form__input(type="email" id="email")
             label(for="email") Ваш имейл
-          .checkout__input.checkout__input--name
+          .checkout__input.checkout__input--name.visually-hidden
             input.form__input(type="text" id="name")
             label(for="name") Ваше имя
-          .checkout__input.checkout__input--country
+          .checkout__input.checkout__input--country.visually-hidden
             select.form__input.form__select(id="country")
                 +options
             label(for="country") Страна
-          .checkout__input.checkout__input--city
+          .checkout__input.checkout__input--city.visually-hidden
             input.form__input(type="text" id="city")
             label(for="city") Город
-          .checkout__input.checkout__input--address
+          .checkout__input.checkout__input--address.visually-hidden
             input.form__input(type="text" id="address")
             label(for="address") Ваш адрес
-          .checkout__input.checkout__input--flat
-            input.only-number.form__input(type="text" id="flat" pattern="^[ 0-9]+$")
-            label(for="flat") № квартиры
-          .checkout__input.checkout__input--zip
-            input.only-number.form__input(type="text" id="zip" pattern="^[ 0-9]+$")
-            label(for="zip") Ваш индекс
-          .checkout__input.checkout__input--phone
+          .inputs__horizontal
+            .checkout__input.checkout__input--flat.visually-hidden
+              input.only-number.form__input(type="text" id="flat" pattern="^[ 0-9]+$")
+              label(for="flat") № квартиры
+            .checkout__input.checkout__input--zip.visually-hidden
+              input.only-number.form__input(type="text" id="zip" pattern="^[ 0-9]+$")
+              label(for="zip") Ваш индекс
+          .checkout__input.checkout__input--phone.visually-hidden
             input.only-number.form__input(type="tel" id="phone" pattern="^[ 0-9]+$")
             label(for="phone") Ваш телефон
 
@@ -55,7 +56,7 @@ block content
               tr
                 th Сумма:
                 th 2600₽
-          .checkout__note.big-text
+          .checkout__note.big-text.opacity
             | Мы свяжемся с вами по&nbsp;почте, чтобы обсудить наиболее удобный и&nbsp;быстрый способ доставки, а&nbsp;потом пришлём ссылку для оплаты.
-          .checkout__pay
+          .checkout__pay.opacity
             button(type="submit") → Оплатить

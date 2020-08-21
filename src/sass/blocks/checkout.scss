@@ -1,6 +1,10 @@
 .checkout {
   margin-bottom: 64px;
 
+  &__product-list {
+    margin-bottom: 50px;
+  }
+
 
   form {
     display: grid;
@@ -10,8 +14,8 @@
 
   &__inputs {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: column;
   }
 
   &__input {
@@ -21,6 +25,12 @@
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
+    transition: opacity 0.6s;
+    transition-delay: 0.1s;
+
+    &.visually-hidden {
+      opacity: 0;
+    }
 
     &--flat,
     &--zip {
@@ -43,6 +53,7 @@
       padding: 0;
       border-radius: 0;
       max-width: 611px;
+      width: 100% !important;
     }
 
     .select2-selection {
@@ -88,8 +99,13 @@
   &__summary {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 73px;
+
+    .opacity {
+      opacity: 0;
+    }
+
     table {
       width: 100%;
 
@@ -112,9 +128,19 @@
     }
   }
 
+  &__note {
+    transition: opacity 0.6s;
+    opacity: 1;
+
+    &.visually-hidden {
+      opacity: 0;
+    }
+  }
+
   &__pay {
-    // margin-top: auto;
+    margin-top: auto;
     margin-bottom: 25px;
+    transition: opacity 0.6s;
 
     button {
       width: 100%;
@@ -128,6 +154,7 @@
       border-right: 1px solid #302D2D;
       background-color: transparent;
       position: relative;
+      transition: opacity 0.6s;
 
       &::before {
         position: absolute;
