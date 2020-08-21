@@ -1,3 +1,3 @@
-// $( function() {
-//   $( ".product__content" ).tabs();
-// } );
+    $( function() {
+      $( "#tabs" ).tabs();
+    } );

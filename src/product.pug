@@ -61,19 +61,23 @@ block content
                 span.product__price 1000₽
               .product__form-button
                 button(type="button") → ДОБАВИТЬ В КОРЗИНУ
-      .product__content.tab
-        button.tab-toggle.is-active.is-opened( data-target="#product-description" data-toggle="tabs" ) (ОПИСАНИЕ)
-        .tab-block.is-active.is-opened( id="product-description" )
+      .product__content.tab(id="tabs")
+        ul
+          li
+            a.tab-toggle( href="#tabs-1" ) (ОПИСАНИЕ)
+          li
+            a.tab-toggle( href="#tabs-2" ) (ДЕТАЛИ)
+          li
+            a.tab-toggle( href="#tabs-3" ) (УХОД)
+        .tab-block( id="tabs-1" )
           .tab-block-inner
             .big-text
               | В новой сумке мы соединили консервативный канвас с&nbsp;современной технологичной фурнитурой. Классическая сумка&nbsp;с&nbsp;невероятным функционалом станет вашим ежедневным cпутником в&nbsp;городских джунглях. Сумка имеет внутренний карман на&nbsp;молнии для&nbsp;документов и&nbsp;важных мелочей, а&nbsp;также два&nbsp;кармана из&nbsp;сетки по&nbsp;бокам, обрамленных резинкой, для термоса, бутылки или зонта. Кроме того, внутри есть лента для&nbsp;ключей, которая удобно отстегивается с&nbsp;помощью фастекса. Сумка имеет две ручки из&nbsp;канваса и&nbsp;нейлоновый ремень на&nbsp;карабинах. Ремень имеет удобную регулировку, чтобы вы&nbsp;подобрали оптимальную для себя длину.
-        button.tab-toggle.is-closed( data-target="#product-details" data-toggle="tabs" ) (ДЕТАЛИ)
-        .tab-block.is-closed( id="product-details" )
+        .tab-block( id="tabs-2" )
           .tab-block-inner
             .big-text
               | Рюкзак сделан из канваса плотностью 17 унций. Его размер —  36 × 35 × 11 см. Внутри есть карман для ноутбука до 15 дюймов  и потайной карман, например, для документов. Есть внешний карман, в котором также расположены петли для ручек  и карабин для ключей.
-        button.tab-toggle.is-closed( data-target="#product-care" data-toggle="tabs" ) (УХОД)
-        .tab-block.is-closed( id="product-care" )
+        .tab-block( id="tabs-3" )
           .tab-block-inner
             .big-text
               | Тут ещё какой-то текст про уход.

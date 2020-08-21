@@ -181,12 +181,20 @@
 
   &__content {
     margin-top: 20px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
     .tab-toggle {
       font-size: 16px;
       line-height: 19px;
       opacity: .4;
       color: #302D2D;
       border: 0;
+      padding-left: 0;
+      padding-right: 12px;
 
       &.is-opened,
       &:hover {
@@ -198,6 +206,7 @@
 
     .tab-block {
       border: 0;
+      padding-top: 9px;
     }
   }
 
