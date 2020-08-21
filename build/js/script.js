@@ -112,7 +112,7 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
 })();
 
 $(function() {
-  alert('hi')
+
 });
 var scroll = new SmoothScroll('a[href*="#"]');
 // (() => {
