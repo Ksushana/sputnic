@@ -14,27 +14,27 @@ block content
             input.form__input(type="email" id="email")
             label(for="email") Ваш имейл
           .checkout__input.checkout__input--name.visually-hidden
-            input.form__input(type="text" id="name")
+            input.form__input(type="text" id="name" autocomplete="off")
             label(for="name") Ваше имя
           .checkout__input.checkout__input--country.visually-hidden
             select.form__input.form__select(id="country")
                 +options
             label(for="country") Страна
           .checkout__input.checkout__input--city.visually-hidden
-            input.form__input(type="text" id="city")
+            input.form__input(type="text" id="city" autocomplete="off")
             label(for="city") Город
           .checkout__input.checkout__input--address.visually-hidden
-            input.form__input(type="text" id="address")
+            input.form__input(type="text" id="address" autocomplete="off")
             label(for="address") Ваш адрес
-          .inputs__horizontal
+          .checkout__horizontal
             .checkout__input.checkout__input--flat.visually-hidden
-              input.only-number.form__input(type="text" id="flat" pattern="^[ 0-9]+$")
+              input.only-number.form__input(type="text" id="flat" pattern="^[ 0-9]+$" autocomplete="off")
               label(for="flat") № квартиры
             .checkout__input.checkout__input--zip.visually-hidden
-              input.only-number.form__input(type="text" id="zip" pattern="^[ 0-9]+$")
+              input.only-number.form__input(type="text" id="zip" pattern="^[ 0-9]+$" autocomplete="off")
               label(for="zip") Ваш индекс
           .checkout__input.checkout__input--phone.visually-hidden
-            input.only-number.form__input(type="tel" id="phone" pattern="^[ 0-9]+$")
+            input.only-number.form__input(type="tel" id="phone" pattern="^[ 0-9]+$" autocomplete="off")
             label(for="phone") Ваш телефон
 
 

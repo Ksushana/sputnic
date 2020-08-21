@@ -32,6 +32,8 @@
       opacity: 0;
     }
 
+
+
     &--flat,
     &--zip {
       width: 48%;
@@ -94,7 +96,10 @@
     }
   }
 
-
+  &__horizontal {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__summary {
     display: flex;
