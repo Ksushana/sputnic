@@ -1,0 +1,79 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Basket';
+  - let isBasket = true;
+
+
+block content
+  .container
+    .cart
+      form.shopping-cart(action='' method='post' data-cart-form='' data-cart-form-inited='true')
+        .cart-body
+          .cart-list
+            .cart-item.cart-item--header
+              .cart-item-inner.item
+                .item-content
+                  .item-caption
+                    | Название
+
+                  .item-counter
+                    | Количество
+                  .item-prices.is-total-price.js-item-total-price Цена
+                  .item-delete удалить
+
+            .cart-item(data-product-id='' data-item-id='')
+              .cart-item-inner.item
+                .item-content
+                  .item-caption
+                    a.item-title(href='#')
+                      | Роллтоп (КОЛХАС) (Ч)
+
+                  .item-counter
+                    .counter.js-variant-counter(data-quantity='' data-quantity-change-init='true')
+                      button.counter-button.is-count-down(type='button' data-quantity-change='-1')
+                      input.counter-input(type='text' value='1' name='cart[quantity][156392260]')
+                      button.counter-button.is-count-up(type='button' data-quantity-change='1')
+                  .item-prices.is-total-price.js-item-total-price 1000₽
+                  .item-delete
+                    button.button.is-item-delete.is-transparent(type='submit' data-item-delete='156392260') ×
+            .cart-item(data-product-id='' data-item-id='')
+              .cart-item-inner.item
+                .item-content
+                  .item-caption
+                    a.item-title(href='#')
+                      | Тоут (РЕМ) (С)
+
+                  .item-counter
+                    .counter.js-variant-counter(data-quantity='' data-quantity-change-init='true')
+                      button.counter-button.is-count-down(type='button' data-quantity-change='-1')
+                      input.counter-input(type='text' value='2' name='cart[quantity][156392260]')
+                      button.counter-button.is-count-up(type='button' data-quantity-change='1')
+                  .item-prices.is-total-price.js-item-total-price 500₽
+                  .item-delete
+                    button.button.is-item-delete.is-transparent(type='submit' data-item-delete='156392260') ×
+            .cart-item(data-product-id='' data-item-id='')
+              .cart-item-inner.item
+                .item-content
+                  .item-caption
+                    a.item-title(href='#')
+                      | Кросс-боди (КАЛАТРАВА) (С)
+
+                  .item-counter
+                    .counter.js-variant-counter(data-quantity='' data-quantity-change-init='true')
+                      button.counter-button.is-count-down(type='button' data-quantity-change='-1')
+                      input.counter-input(type='text' value='10' name='cart[quantity][156392260]')
+                      button.counter-button.is-count-up(type='button' data-quantity-change='1')
+                  .item-prices.is-total-price.js-item-total-price 700₽
+                  .item-delete
+                    button.button.is-item-delete.is-transparent(type='submit' data-item-delete='156392260') ×
+        .cart-footer.row.flex-end
+          .flex-start-sm.cart-block-checkout
+            .cart-total.js-shopcart-total-summ.big-text  Сумма: 2900₽
+            button.cart-checkout.button.is-primary(type='submit' data-cart-submit='')
+              span.button-text
+                | → Оформить заказ
+
+      .notice.notice-info.text-center.js-cart-empty.hidden
+        | Ваша корзина пуста
+

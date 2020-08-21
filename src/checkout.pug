@@ -1,0 +1,56 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Basket';
+  - let isBasket = true;
+
+
+block content
+  .container
+    .checkout
+      form(action="post")
+        .checkout__inputs
+          .checkout__input.checkout__input--email
+            input.form__input(type="email" id="email")
+            label(for="email") Ваш имейл
+          .checkout__input.checkout__input--name.visually-hidden
+            input.form__input(type="text" id="name")
+            label(for="name") Ваше имя
+          .checkout__input.checkout__input--country.visually-hidden
+            input.form__input(type="text" id="country")
+            label(for="country") Страна
+          .checkout__input.checkout__input--city.visually-hidden
+            input.form__input(type="text" id="city")
+            label(for="city") Город
+          .checkout__input.checkout__input--address.visually-hidden
+            input.form__input(type="text" id="address")
+            label(for="address") Ваш адрес
+          .checkout__input.checkout__input--flat.visually-hidden
+            input.form__input(type="text" id="flat")
+            label(for="flat") N квартиры
+          .checkout__input.checkout__input--zip.visually-hidden
+            input.form__input(type="text" id="zip")
+            label(for="zip") Ваш индекс
+          .checkout__input.checkout__input--phone.visually-hidden
+            input.form__input(type="tel" id="phone")
+            label(for="phone") Ваш телефон
+
+
+        .checkout__summary
+          .checkout__product-list
+            table
+              tr
+                td Роллтоп (КОЛХАС) (Ч) × 1
+                td 1000₽
+              tr
+                td Тоут (РЕМ) (С) × 2
+                td 500₽
+              tr
+                td Кросс-боди (КАЛАТРАВА) (С) × 10
+                td 700₽
+              tr
+                td Доставка СДЭК по России
+                td 400₽
+              tr
+                th Сумма:
+                th 2600₽

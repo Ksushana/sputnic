@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Sputnik | Contacts</title>
+  <title>Sputnik | Basket</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="fonts/FavoritPro-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
@@ -30,26 +30,45 @@
   </header>
   <main>
     <div class="container">
-      <div class="centered-block contacts">
-        <div class="centered-block__container">
-          <div class="centered-block__block centered-block__block--social">
-            <h2>(СОЦИАЛЬНЫЕ СЕТИ)</h2>
-            <ul>
-              <li><a class="big-text" href="#">INSTAGRAM</a></li>
-              <li><a class="big-text" href="#">FACEBOOK</a></li>
-              <li><a class="big-text" href="#">VK</a></li>
-            </ul>
+      <div class="checkout">
+        <form action="post">
+          <div class="checkout__inputs">
+            <div class="checkout__input checkout__input--email"><input class="form__input" type="email" id="email"><label for="email">Ваш имейл</label></div>
+            <div class="checkout__input checkout__input--name visually-hidden"><input class="form__input" type="text" id="name"><label for="name">Ваше имя</label></div>
+            <div class="checkout__input checkout__input--country visually-hidden"><input class="form__input" type="text" id="country"><label for="country">Страна</label></div>
+            <div class="checkout__input checkout__input--city visually-hidden"><input class="form__input" type="text" id="city"><label for="city">Город</label></div>
+            <div class="checkout__input checkout__input--address visually-hidden"><input class="form__input" type="text" id="address"><label for="address">Ваш адрес</label></div>
+            <div class="checkout__input checkout__input--flat visually-hidden"><input class="form__input" type="text" id="flat"><label for="flat">N квартиры</label></div>
+            <div class="checkout__input checkout__input--zip visually-hidden"><input class="form__input" type="text" id="zip"><label for="zip">Ваш индекс</label></div>
+            <div class="checkout__input checkout__input--phone visually-hidden"><input class="form__input" type="tel" id="phone"><label for="phone">Ваш телефон</label></div>
           </div>
-          <div class="centered-block__block centered-block__block--buyer">
-            <h2>(ПОКУПАТЕЛЯМ)</h2><a class="big-text" href="emailto:HELLO@SPUTNIK-BAGS.RU">HELLO@SPUTNIK-BAGS.RU</a>
+          <div class="checkout__summary">
+            <div class="checkout__product-list">
+              <table>
+                <tr>
+                  <td>Роллтоп (КОЛХАС) (Ч) × 1</td>
+                  <td>1000₽</td>
+                </tr>
+                <tr>
+                  <td>Тоут (РЕМ) (С) × 2</td>
+                  <td>500₽</td>
+                </tr>
+                <tr>
+                  <td>Кросс-боди (КАЛАТРАВА) (С) × 10</td>
+                  <td>700₽</td>
+                </tr>
+                <tr>
+                  <td>Доставка СДЭК по России</td>
+                  <td>400₽</td>
+                </tr>
+                <tr>
+                  <th>Сумма:</th>
+                  <th>2600₽</th>
+                </tr>
+              </table>
+            </div>
           </div>
-          <div class="centered-block__block centered-block__block--corporate">
-            <h2>(КОРПОРАТИВНЫЕ ЗАКАЗЫ)</h2><a class="big-text" href="emailto:WHITELABEL@SPUTNIK-BAGS.RU">WHITELABEL@SPUTNIK-BAGS.RU</a>
-          </div>
-          <div class="centered-block__block centered-block__block--purchase">
-            <h2>(ЗАКУПКИ)</h2><a class="big-text" href="emailto:WHOLESALE@SPUTNIK-BAGS.RU">WHOLESALE@SPUTNIK-BAGS.RU</a>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </main>
@@ -59,7 +78,7 @@
         <div class="footer-lang"><a href="/en">EN</a><a href="/ru" aria-current="page">RU</a></div>
         <div class="footer-menu-wrapper">
           <ul class="footer-menu">
-            <li class="footer-menu-item"><a class="active-link" target="blank" title="контакты" href="./contacts.html">контакты</a></li>
+            <li class="footer-menu-item"><a target="blank" title="контакты" href="./contacts.html">контакты</a></li>
             <li class="footer-menu-item"><a target="blank" title="ИНФОРМАЦИЯ" href="./information.html">ИНФОРМАЦИЯ</a></li>
             <li class="footer-menu-item"><a target="blank" title="корпоративные заказы" href="./corporate-orders.html">корпоративные заказы</a></li>
           </ul>

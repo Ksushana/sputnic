@@ -1,0 +1,80 @@
+.checkout {
+
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 178px;
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__input {
+    height: 131px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+
+    &--flat,
+    &--zip {
+      width: 48%;
+    }
+
+    input {
+      border: 0;
+      border-bottom: 1px solid #302D2D;
+      outline: none;
+      font-size: 44px;
+      line-height: 52px;
+      background-color: transparent;
+      margin-bottom: 32px;
+    }
+
+    label {
+      position: absolute;
+      pointer-events: none;
+      transition: all 0.4s;
+      font-size: 44px;
+      line-height: 52px;
+      top: 48px;
+    }
+
+    input:focus ~ label,
+    input.filled ~ label {
+      font-size: 16px;
+      line-height: 19px;
+      top: 17px;
+      transition-property: top, font-size, line-height;
+    }
+  }
+
+  &__summary {
+    margin-top: 73px;
+    table {
+      width: 100%;
+
+
+    }
+
+    td {
+      padding-bottom: 10px;
+    }
+
+    th {
+      padding-top: 10px;
+      border-top: 1px solid #302D2D;
+    }
+
+    tr {
+      td:last-child {
+        width: 140px;
+      }
+    }
+  }
+}
