@@ -15,16 +15,16 @@ html( lang="ru" )
       .row.flex-center-sm.flex-middle
         .logotype-wrapper
           .logotype.text-center-sm
-            a.logotype-link(title='Sputnik' href=(isMain ? null : '/main-page.html'))
+            a.logotype-link(title='Sputnik' href=(isMain ? null : './main-page.html'))
               span.logotype-text (SPUTNIK)
         .catalog-menu-wrapper(class=(isMenuHide ? 'menu-hide' : null))
           ul.catalog-menu
             li.catalog-menu-item.menu-item.level-1
-              a( target="blank" title="КОЛЛЕКЦИЯ" href="/collection.html" class=(isCollection ? 'active-link' : null)) КОЛЛЕКЦИЯ
+              a( target="blank" title="КОЛЛЕКЦИЯ" href="./collection.html" class=(isCollection ? 'active-link' : null)) КОЛЛЕКЦИЯ
             li.catalog-menu-item.menu-item.level-1
-              a( target="blank" title="ПРОЕКТЫ" href="/projects.html" class=(isProjects ? 'active-link' : null)) ПРОЕКТЫ
+              a( target="blank" title="ПРОЕКТЫ" href="./projects.html" class=(isProjects ? 'active-link' : null)) ПРОЕКТЫ
             li.catalog-menu-item.menu-item.level-1
-              a( target="blank" title="БРЕНД" href="/brand.html" class=(isBrand ? 'active-link' : null)) БРЕНД
+              a( target="blank" title="БРЕНД" href="./brand.html" class=(isBrand ? 'active-link' : null)) БРЕНД
           .sub-menu(class=(isProject ? 'collection-name' : 'display-none'))
             span Liars Collective
 
