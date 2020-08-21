@@ -14266,8 +14266,12 @@ input.co-input-field {
   right: -6px;
 }
 
-.product__inputs label.black {
+.product__inputs .active {
   color: #302D2D;
+}
+
+.product__inputs .inactive {
+  color: #D2D2D2;
 }
 
 .product__inputs input:checked + label {

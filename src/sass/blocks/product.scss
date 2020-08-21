@@ -141,8 +141,11 @@
       }
     }
 
-    label.black {
+    .active {
       color: #302D2D;
+    }
+    .inactive {
+      color: #D2D2D2;;
     }
 
     input:checked + label {
