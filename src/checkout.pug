@@ -1,8 +1,7 @@
 extends pug/layout.pug
 
 block variables
-  - let title = 'Basket';
-  - let isBasket = true;
+  - let title = 'Checkout';
 
 
 block content
@@ -54,5 +53,7 @@ block content
               tr
                 th Сумма:
                 th 2600₽
+          .checkout__note.big-text
+            | Мы свяжемся с вами по&nbsp;почте, чтобы обсудить наиболее удобный и&nbsp;быстрый способ доставки, а&nbsp;потом пришлём ссылку для оплаты.
           .checkout__pay
             button(type="submit") → Оплатить

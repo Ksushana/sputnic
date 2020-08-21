@@ -14705,6 +14705,9 @@ input.co-input-field {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 73px;
 }
 
@@ -14726,7 +14729,6 @@ input.co-input-field {
 }
 
 .checkout__pay {
-  margin-top: auto;
   margin-bottom: 25px;
 }
 
@@ -14779,4 +14781,8 @@ input.co-input-field {
   width: 50%;
   background-image: none;
   outline: none;
+}
+
+.final {
+  width: 610px;
 }

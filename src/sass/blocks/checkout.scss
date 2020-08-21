@@ -58,6 +58,7 @@
   &__summary {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-top: 73px;
     table {
       width: 100%;
@@ -82,7 +83,7 @@
   }
 
   &__pay {
-    margin-top: auto;
+    // margin-top: auto;
     margin-bottom: 25px;
 
     button {
