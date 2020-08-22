@@ -18800,6 +18800,7 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
     speed: 400,
     slidesPerView: 1,
     spaceBetween: 20,
+    loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -18812,6 +18813,7 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
     speed: 400,
     slidesPerView: "auto",
     spaceBetween: 20,
+    loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

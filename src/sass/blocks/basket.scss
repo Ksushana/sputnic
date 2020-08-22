@@ -21,6 +21,10 @@
         color: transparent;
       }
     }
+
+    &__color {
+      opacity: 0.2;
+    }
   }
 
   .item {
@@ -33,12 +37,12 @@
   }
 
   .item-title {
-    transition: opacity 0.3s;
+    transition: color 0.4s;
   }
 
   .item-title:hover {
-    color: unset;
-    opacity: 0.6;
+    color: #8F8F8F;
+
   }
 
   .item-counter {
@@ -172,6 +176,12 @@
     background-color: transparent;
     color: inherit;
     position: relative;
+    transition: color 0.4s;
+
+
+    &:hover {
+      color: #8F8F8F;
+    }
 
     &::before {
       position: absolute;

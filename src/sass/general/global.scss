@@ -21,7 +21,6 @@ html {
 * {
   box-sizing: border-box;
   font-family: $font-family !important;
-  font-feature-settings: 'case' on;
   font-feature-settings: 'ss04' on, 'case' on;
 }
 
@@ -112,14 +111,14 @@ input[type="time"]::-webkit-clear-button {
 
 @-webkit-keyframes autofill {
   to {
-    color: inherit;
-    background: transparent;
+    color: inherit !important;
+    background: transparent !important;
   }
 }
 
 input:-webkit-autofill {
-  -webkit-animation-name: autofill;
-  -webkit-animation-fill-mode: both;
+  -webkit-animation-name: autofill !important;
+  -webkit-animation-fill-mode: both !important;
 }
 
 input {

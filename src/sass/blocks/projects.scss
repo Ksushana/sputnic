@@ -32,11 +32,14 @@
 
   .project__slider {
     margin-top: 52px;
+    width: calc( 100% + 40px);
+    margin-left: -20px;
   }
 
   .swiper-slide {
     height: 709px;
     width: auto;
+    margin-left: 20px;
 
     img {
       height: 680px;

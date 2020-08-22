@@ -10,15 +10,37 @@
     font-size: 16px;
     line-height: 19px;
     color: $color-text;
+
+
   }
 
   .logotype-wrapper {
     margin: 0;
 
+    .small-logo {
+      position: fixed;
+      height: 19px;
+      width: 23px;
+      top: 10px;
+      left: 20px;
+      z-index: 1;
+      background-color: transparent;
+    }
   }
 
-  .logotype-text {
+  .logotype-link {
     padding: 0;
+    z-index: 20;
+    background-color: #F8F8F8;
+    display: block;
+    position: relative;
+
+    img {
+      height: 19px;
+      width: 80px;
+
+      margin-top: -4px;
+    }
   }
 
   .catalog-menu {
@@ -31,14 +53,34 @@
     margin-bottom: 0;
     padding-left: 2px;
 
+
+    .dark {
+      opacity: 1 !important;
+      color: #302D2D;
+    }
+
     li {
       color: $color-text;
 
       margin-bottom: 0;
 
-      a:not(.active-link) {
-        opacity: 0.4;
+      a {
+        transition: color 0.4s;
+
+        &:hover {
+          color: #8F8F8F;
+        }
       }
+
+      a:not(.active-link) {
+        color: #8F8F8F;
+
+        &:hover {
+          color: #302D2D;
+        }
+      }
+
+
     }
 
   }

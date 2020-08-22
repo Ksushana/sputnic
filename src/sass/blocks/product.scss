@@ -15,6 +15,7 @@
   &__header-slider {
     grid-area: f;
     margin-right: 10px;
+    // display: flex;
   }
 
   &__slider {
@@ -34,6 +35,10 @@
 
   &__slide-block {
     width: 49%;
+
+    img {
+      height: 95.8%;
+    }
   }
 
   &__info {
@@ -161,6 +166,8 @@
     padding: 20px 17px 20px 30px;
     display: flex;
     cursor: pointer;
+
+
     &::before {
       position: absolute;
       content: "";
@@ -175,6 +182,13 @@
        outline: none;
        background-color: transparent;
        margin: 0 auto;
+
+       transition: color 0.4s;
+
+
+      &:hover {
+        color: #8F8F8F;
+      }
      }
 
   }
@@ -204,9 +218,14 @@
       }
     }
 
+    .ui-state-active a {
+      opacity: 1;
+    }
+
     .tab-block {
       border: 0;
       padding-top: 9px;
+      min-height: 600px;
     }
   }
 
