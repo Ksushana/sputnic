@@ -5,6 +5,12 @@
   margin-top: 17px;
   margin-bottom: 97px;
 
+  @include mobile {
+    font-size: 18px;
+    line-height: 110%;
+    margin-top: -8px;
+  }
+
   .cart-list {
     margin: 0;
   }
@@ -12,10 +18,24 @@
   .cart-item {
     margin: 0;
 
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 15px;
+      padding-top: 20px;
+      border-bottom: 1px solid #302D2D;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
     &--header {
       font-size: 16px;
       line-height: 19px;
       margin-bottom: 23px;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
 
       .item-delete {
         color: transparent;
@@ -30,10 +50,27 @@
   .item {
     border: none;
     margin-bottom: 22px;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 1024px) {
+    .item-content {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 
   .item-caption {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
+    width: 56.3%;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      padding-left: 0;
+    }
   }
 
   .item-title {
@@ -45,15 +82,35 @@
 
   }
 
+  .cart-item-inner {
+    @media screen and (max-width: 1024px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
   .item-counter {
     padding: 0;
     flex: unset;
     width: 314px;
+
+    @media screen and (max-width: 1024px) {
+      width: 78px;
+      order: 3;
+      margin-right: 22px;
+      margin-left: auto;
+    }
   }
 
   .counter {
     width: 9rem;
     height: 3rem;
+
+    @include mobile {
+      width: 75px;
+      height: 20px;
+      margin-right: 16px;
+    }
   }
 
   .counter-button {
@@ -67,6 +124,12 @@
     color: #3d3d3d;
     background-color: transparent;
     border-radius: 0;
+
+    @include mobile {
+      display: block;
+      font-size: 18px;
+      line-height: 110%;
+    }
 
     &::before {
       font-family: $font-family;
@@ -94,12 +157,27 @@
     background-color: transparent;
     color: #302D2D;
     text-align: center;
+    outline: none;
+
+    @media screen and (max-width: 1024px) {
+      min-width: 16px;
+    margin: 0px -11px;
+    }
   }
 
   .item-delete {
     padding-right: 7px;
     padding-left: 0;
     width: 31px;
+
+    @media screen and (max-width: 1024px) {
+      width: 25px;
+      margin-left: auto;
+    }
+
+    @include mobile {
+      width: 10px;
+    }
 }
 
   .item-prices.is-total-price {
@@ -107,11 +185,24 @@
     width: 272px;
     flex: unset;
     text-align: left;
+    // font-size: 44px;
+    // line-height: 52px;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 20px;
+      width: 107px;
+      order: 2;
+    }
   }
 
 
 
   .item-delete {
+
+    @media screen and (max-width: 1024px) {
+      order: 4;
+    }
     button {
       padding: 0;
 
@@ -132,6 +223,13 @@
     position: relative;
     padding-top: 10px;
     padding-bottom: 0;
+
+    @include mobile {
+      margin-right: 0;
+      width: 100%;
+      margin-top: 20px;
+      padding-top: 5px;
+    }
 
 
     &::before {
@@ -165,6 +263,22 @@
     padding-bottom: 8px;
     border-right: 1px solid #302D2D;
     border-left: 1px solid #302D2D;
+
+    @include mobile  {
+      font-size: 12px;
+      line-height: 14px;
+      padding-top: 7px;
+      padding-bottom: 9px;
+      margin-bottom: 0;
+    }
+
+  }
+
+  .cart-footer.row {
+    @include mobile  {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   .cart-checkout.button {
@@ -177,6 +291,13 @@
     color: inherit;
     position: relative;
     transition: color 0.4s;
+    text-transform: uppercase;
+
+    @include mobile  {
+      font-size: 12px;
+      line-height: 14px;
+      margin: 0;
+    }
 
 
     &:hover {
@@ -191,6 +312,10 @@
       top: -10px;
       left: 10px;
       background-color: #302D2D;
+
+      @include mobile  {
+        top: 0;
+      }
     }
   }
 

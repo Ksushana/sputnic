@@ -25,6 +25,9 @@ $(function() {
   const payButton = $(".checkout__pay").first();
 
   const note = $(".checkout__note").first();
+  const noteMob = $(".checkout__note-form").first();
+
+  const summary = $(".checkout__summary").first();
 
   const emailRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -38,6 +41,7 @@ $(function() {
   const hideField = (field) => field.addClass("visually-hidden");
   const delOpacity = (field) => field.removeClass("opacity");
   const addOpacity = (field) => field.addClass("opacity");
+  const delOpacityMob = (field) => field.removeClass("visually-hidden-mob");
 
   emailInput.on("input", (evt) => {
     const value = evt.target.value;
@@ -55,12 +59,20 @@ $(function() {
   });
 
   countrySelect.on("select2:select", () => {
-    console.log("ggg");
     const value = countrySelect.val();
-    if (value !== "Россия") {
-      note.removeClass("opacity");
-    } else {
-      note.addClass("opacity");
+    if(window.isMobile()) {
+      if (value !== "Россия") {
+        noteMob.removeClass("opacity-0");
+      } else {
+        noteMob.addClass("opacity-0");
+      }
+    }
+    if(!window.isMobile()){
+      if (value !== "Россия") {
+        note.removeClass("opacity");
+      } else {
+        note.addClass("opacity");
+      }
     }
   });
 
@@ -105,4 +117,13 @@ $(function() {
       delOpacity(payButton);
     }
   });
+
+  if(window.isMobile()) {
+    phoneInput.on("input", (evt) => {
+      const value = evt.target.value;
+      if (isPresent(value)) {
+        delOpacityMob(summary);
+      }
+    });
+  }
 });

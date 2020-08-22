@@ -20,9 +20,12 @@ block content
             select.form__input.form__select(id="country")
                 +options
             label(for="country") Страна
+            .checkout__note-form.big-text.opacity-0
+              | Мы свяжемся с вами по&nbsp;почте, чтобы обсудить наиболее удобный и&nbsp;быстрый способ доставки, а&nbsp;потом пришлём ссылку для оплаты.
           .checkout__input.checkout__input--city.visually-hidden
             input.form__input(type="text" id="city" autocomplete="off")
             label(for="city") Город
+
           .checkout__input.checkout__input--address.visually-hidden
             input.form__input(type="text" id="address" autocomplete="off")
             label(for="address") Ваш адрес
@@ -38,7 +41,7 @@ block content
             label(for="phone") Ваш телефон
 
 
-        .checkout__summary
+        .checkout__summary.visually-hidden-mob
           .checkout__product-list
             table
               tr

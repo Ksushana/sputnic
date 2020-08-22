@@ -1,8 +1,14 @@
 .checkout {
   margin-bottom: 64px;
 
+  @include mobile {
+    margin-top: -16px;
+  }
+
   &__product-list {
     margin-bottom: 50px;
+
+
   }
 
 
@@ -10,6 +16,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 178px;
+
+    @media screen and (max-width: 1100px) {
+      grid-column-gap: 40px;
+    }
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1.4fr 1fr;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__inputs {
@@ -28,6 +46,12 @@
     transition: opacity 0.6s;
     transition-delay: 0.1s;
 
+    @include mobile {
+      font-size: 18px;
+      line-height: 110%;
+      height: 78px;
+    }
+
 
     &.visually-hidden {
       opacity: 0;
@@ -36,10 +60,38 @@
     &--flat,
     &--zip {
       width: 48%;
+
+      @media screen and (max-width: 1300px) {
+        width: 100%;
+      }
+
+      @include mobile {
+        width: 48%;
+      }
+    }
+
+    &--country {
+      @include mobile {
+        height: auto;
+        min-height: 78px;
+
+        .checkout__note-form {
+          font-size: 18px;
+          line-height: 20px;
+          padding-top: 27px;
+          padding-right: 10px;
+          padding-bottom: 4px;
+        }
+      }
     }
 
     .select2 {
       height: 61px;
+
+      @include mobile {
+        height: 72px;
+
+      }
     }
 
     input,
@@ -55,6 +107,13 @@
       border-radius: 0;
       max-width: 611px;
       width: 100% !important;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 36px;
+        margin-bottom: 4px;
+        max-width: 100%;
+      }
     }
 
     .select2-selection {
@@ -70,6 +129,10 @@
       color: #302D2D;;
       line-height: 64px;
       padding-left: 0;
+
+      @include mobile {
+        line-height: 113px;
+      }
     }
 
     .select2-selection__arrow {
@@ -84,6 +147,12 @@
       line-height: 52px;
       top: 48px;
       color: #D2D2D2;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 110%;
+        top: 48px;
+      }
     }
 
     input:focus ~ label,
@@ -94,12 +163,26 @@
       top: 17px;
       transition-property: top, font-size, line-height;
       color: #302D2D;
+
+      @include mobile {
+        font-size: 10px;
+        line-height: 12px;
+        top: 28px;
+      }
     }
   }
 
   &__horizontal {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1300px) {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      flex-wrap: nowrap;
+    }
   }
 
   &__summary {
@@ -108,9 +191,13 @@
     justify-content: flex-start;
     margin-top: 73px;
 
-    .opacity {
-      opacity: 0;
+    @include mobile {
+      margin-top: 43px;
+      font-size: 12px;
+      line-height: 110%;
     }
+
+
 
     table {
       width: 100%;
@@ -120,6 +207,7 @@
 
     td {
       padding-bottom: 10px;
+      padding-right: 15px;
     }
 
     th {
@@ -130,6 +218,22 @@
     tr {
       td:last-child {
         width: 140px;
+
+        @media screen and (max-width: 900px) {
+          width: 60px;
+        }
+
+        @include mobile {
+          padding-right: 0;
+          text-align: right;
+        }
+      }
+
+      th:last-child {
+        @include mobile {
+          padding-right: 0;
+          text-align: right;
+        }
       }
     }
   }
@@ -137,6 +241,15 @@
   &__note {
     transition: opacity 0.6s;
     opacity: 1;
+
+    @media screen and (max-width: 1100px) {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      display: none;
+    }
 
     &.visually-hidden {
       opacity: 0;
@@ -162,6 +275,15 @@
       position: relative;
       transition: color 0.4s;
       color: #302D2D;
+      text-transform: uppercase;
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 14px;
+        height: 27px;
+        width: calc(100% + 10px);
+        margin-left: -5px;
+      }
 
 
       &:hover {
@@ -176,6 +298,12 @@
         top: -10px;
         left: 10px;
         background-color: #302D2D;
+
+        @include mobile {
+          width: calc( 100% - 10px );
+          top: -5px;
+          left: 5px;
+        }
       }
 
       &::after {
@@ -186,8 +314,24 @@
         bottom: -10px;
         left: 10px;
         background-color: #302D2D;
+
+        @include mobile {
+          width: calc( 100% - 10px );
+          bottom: -5px;
+          left: 5px;
+        }
       }
     }
+  }
+
+  .opacity {
+    opacity: 0;
+  }
+
+  .opacity-0 {
+    opacity: 0;
+    height: 0;
+    padding: 0;
   }
 }
 
