@@ -4,6 +4,10 @@
 
 .product {
   margin-bottom: 81px;
+
+  @include mobile {
+    margin-bottom: 17px;
+  }
   &__header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -34,8 +38,7 @@
     .swiper-slide {
       display: flex;
       justify-content: space-between;
-      @include mobile {
-      }
+
 
 
       .row {
@@ -44,6 +47,12 @@
         line-height: 19px;
         font-feature-settings: 'ss04' on, 'case' on;
         color: #D2D2D2;
+
+        @include mobile {
+          font-size: 10px;
+          line-height: 12px;
+          margin: 0;
+        }
       }
     }
   }
@@ -61,6 +70,7 @@
 
       @include mobile {
         height: 448px;
+        object-fit: contain;
       }
     }
   }
@@ -72,7 +82,9 @@
     justify-content: space-between;
     margin-bottom: 29px;
 
-
+    @include mobile {
+      margin-top: 16px;
+    }
   }
 
   &__name {
@@ -86,18 +98,32 @@
     @include mobile {
       font-size: 20px;
       line-height: 110%;
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 9px;
     }
   }
 
   &__price {
     display: inline-block;
     margin-left: auto;
+
+    @include mobile {
+      margin-right: 10px;
+    }
   }
 
   &__add-to-cart {
     min-height: 118px;
     width: 100%;
     position: relative;
+
+    @include mobile  {
+      min-height: 71px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
     &::before,
     &::after {
       position: absolute;
@@ -106,14 +132,27 @@
       height: 98px;
       top: 10px;
       background-color: #302D2D;
+
+      @include mobile  {
+        height: 86%;
+      top: 7%;
+      }
     }
 
     &::before {
       left: 0;
+
+      @include mobile  {
+        left: -5px;
+      }
     }
 
     &::after {
       right: 0;
+
+      @include mobile  {
+        right: -5px;
+      }
     }
 
     form {
@@ -148,6 +187,10 @@
     padding: 20px 30px 20px;
     display: flex;
     justify-content: flex-start;
+
+    @include mobile {
+      padding: 11px 8px 12px;
+    }
 
     input {
       display: none;
@@ -198,6 +241,10 @@
     display: flex;
     cursor: pointer;
 
+    @include mobile {
+      padding: 14px 28px 9px 30px;
+    }
+
 
     &::before {
       position: absolute;
@@ -231,6 +278,10 @@
       list-style: none;
       padding: 0;
       display: flex;
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
     }
     .tab-toggle {
       font-size: 16px;
@@ -244,6 +295,8 @@
       @include mobile  {
         font-size: 10px;
         line-height: 12px;
+        margin: 0;
+        padding: 0 8px 0 0;
       }
 
       &.is-opened,
@@ -268,6 +321,10 @@
         line-height: 110%;
         padding: 0;
         min-height: 400px;
+
+        .big-text {
+          line-height: 21px;
+        }
       }
     }
   }
