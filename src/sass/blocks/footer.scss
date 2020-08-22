@@ -1,12 +1,28 @@
 .sputnik-footer {
   padding: 10px 20px;
   font-size: 12px;
-    line-height: 14px;
-    color: #8F8F8F;
-    text-transform: uppercase;
+  line-height: 14px;
+  color: #8F8F8F;
+  text-transform: uppercase;
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 20px 10px;
+  }
 
   .row {
     margin: 0;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .footer-lang {
+    @include mobile {
+      order: 2;
+    }
   }
 
   .footer-menu-wrapper {
@@ -14,6 +30,12 @@
     padding: 0;
     border: 0;
     margin-right: auto;
+
+    @include mobile {
+      order: 3;
+      display: flex;
+      flex-direction: column;
+    }
 
   }
 
@@ -54,11 +76,21 @@
     padding-left: 2px;
     font-feature-settings: 'case' on;
 
+    @include mobile {
+      flex-direction: column;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
 
     li {
       margin-bottom: 0;
       margin-top: 0;
       transition: color 0.4s;
+
+      @include mobile {
+        margin-left: 0;
+      }
 
       &:hover {
         color: #302D2D;
@@ -74,6 +106,24 @@
 
   .social-menu {
     margin-bottom: 0;
+
+    @include mobile {
+      flex-direction: column;
+      margin-left: 0;
+    }
+  }
+
+  .social-menu-block {
+    @include mobile {
+      order: 1;
+      margin-bottom: 25px;
+    }
+  }
+
+  .social-menu-item {
+    @include mobile {
+      padding-left: 0;
+    }
   }
 
   .social-menu-link {

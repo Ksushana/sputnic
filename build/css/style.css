@@ -1068,6 +1068,13 @@ body {
           box-sizing: border-box;
 }
 
+@media (max-width: 785px) {
+  body {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -1109,7 +1116,8 @@ a {
 
 @media (max-width: 785px) {
   .container {
-    padding-bottom: 0;
+    padding: 0 10px;
+    min-height: auto;
   }
 }
 
@@ -11191,11 +11199,24 @@ input.co-input-field {
   padding: 10px 20px;
 }
 
+@media (max-width: 785px) {
+  .sputnik-header {
+    padding: 7px 10px;
+  }
+}
+
 .sputnik-header .row {
   margin: 0;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media (max-width: 785px) {
+  .sputnik-header .row.main-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .sputnik-header .logotype-link {
@@ -11233,6 +11254,17 @@ input.co-input-field {
   margin-top: -4px;
 }
 
+@media (max-width: 785px) {
+  .sputnik-header .logotype-link img {
+    width: 50px;
+    height: 12px;
+  }
+  .sputnik-header .logotype-link img.main {
+    width: 99px;
+    height: 24px;
+  }
+}
+
 .sputnik-header .catalog-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11247,14 +11279,24 @@ input.co-input-field {
   padding-left: 2px;
 }
 
+@media (max-width: 785px) {
+  .sputnik-header .catalog-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .sputnik-header .catalog-menu .dark {
   opacity: 1 !important;
-  color: #302D2D;
+  color: #302D2D !important;
 }
 
 .sputnik-header .catalog-menu li {
   color: #302D2D;
   margin-bottom: 0;
+  margin-left: .5rem;
 }
 
 .sputnik-header .catalog-menu li a {
@@ -11280,6 +11322,13 @@ input.co-input-field {
   margin-top: -10px;
   border: 0;
   margin-right: auto;
+}
+
+@media (max-width: 785px) {
+  .sputnik-header .catalog-menu-wrapper {
+    padding: 8px 0 0;
+    margin: -10px auto 0 -4px;
+  }
 }
 
 .sputnik-header .catalog-menu-wrapper.menu-hide {
@@ -11330,6 +11379,13 @@ input.co-input-field {
   gap: 20px;
 }
 
+@media (max-width: 785px) {
+  .main-page {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
 .main-page .main-page__photo img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -11347,8 +11403,33 @@ input.co-input-field {
   text-transform: uppercase;
 }
 
+@media (max-width: 785px) {
+  .sputnik-footer {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 20px 10px;
+  }
+}
+
 .sputnik-footer .row {
   margin: 0;
+}
+
+@media (max-width: 785px) {
+  .sputnik-footer .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 785px) {
+  .sputnik-footer .footer-lang {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .sputnik-footer .footer-menu-wrapper {
@@ -11356,6 +11437,21 @@ input.co-input-field {
   padding: 0;
   border: 0;
   margin-right: auto;
+}
+
+@media (max-width: 785px) {
+  .sputnik-footer .footer-menu-wrapper {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .sputnik-footer .footer-lang {
@@ -11401,11 +11497,28 @@ input.co-input-field {
           font-feature-settings: 'case' on;
 }
 
+@media (max-width: 785px) {
+  .sputnik-footer .footer-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
 .sputnik-footer .footer-menu li {
   margin-bottom: 0;
   margin-top: 0;
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
+}
+
+@media (max-width: 785px) {
+  .sputnik-footer .footer-menu li {
+    margin-left: 0;
+  }
 }
 
 .sputnik-footer .footer-menu li:hover {
@@ -11418,6 +11531,31 @@ input.co-input-field {
 
 .sputnik-footer .social-menu {
   margin-bottom: 0;
+}
+
+@media (max-width: 785px) {
+  .sputnik-footer .social-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 785px) {
+  .sputnik-footer .social-menu-block {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 785px) {
+  .sputnik-footer .social-menu-item {
+    padding-left: 0;
+  }
 }
 
 .sputnik-footer .social-menu-link {
