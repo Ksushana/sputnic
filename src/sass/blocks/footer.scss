@@ -4,11 +4,37 @@
   line-height: 14px;
   color: #8F8F8F;
   text-transform: uppercase;
+  margin-bottom: 20px;
 
   @include mobile {
     font-size: 20px;
     line-height: 24px;
-    padding: 20px 10px;
+    padding: 0 10px;
+
+
+  }
+
+  &.main-footer {
+    @include mobile {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 20px 10px;
+
+      .social-menu-block {
+        order: 1;
+        margin-bottom: 25px;
+        position: static;
+      }
+
+      .social-menu-item {
+        text-align: left;
+      }
+    }
+  }
+
+  @include mobile {
+    font-size: 10px;
+    line-height: 12px;
   }
 
   .row {
@@ -102,6 +128,14 @@
 
   .footer-menu-item {
     margin-right: 10px;
+
+    @include mobile {
+      &--onlymobile {
+        margin: 0;
+      text-align: right;
+
+      }
+    }
   }
 
   .social-menu {
@@ -115,14 +149,26 @@
 
   .social-menu-block {
     @include mobile {
-      order: 1;
-      margin-bottom: 25px;
+
+      position: absolute;
+        right: 16px;
     }
   }
 
   .social-menu-item {
+    &--onlymobile {
+      display: none;
+    }
+
     @include mobile {
       padding-left: 0;
+      padding-right: 0;
+      text-align: right;
+
+
+      &--onlymobile {
+        display: block;
+        }
     }
   }
 

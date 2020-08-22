@@ -9,9 +9,23 @@
     align-items: flex-start;
 
     @include mobile {
+      font-size: 10px;
+      line-height: 12px;
+
       &.main-menu {
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        .catalog-menu {
+          flex-direction: column;
+        }
+
+        .catalog-menu-wrapper {
+          padding: 8px 0 0;
+          margin: -10px auto 0 -4px;
+          font-size: 20px;
+          line-height: 24px;
+        }
       }
     }
   }
@@ -21,6 +35,14 @@
     font-size: 16px;
     line-height: 19px;
     color: $color-text;
+  }
+
+  .logotype-text {
+    @include mobile {
+      padding: 0;
+      margin-top: 3px;
+      display: inline-block;
+    }
   }
 
   .logotype-wrapper {
@@ -35,7 +57,12 @@
       z-index: 1;
       background-color: transparent;
 
-
+      @include mobile {
+        height: 12px;
+        width: 14px;
+        top: 10px;
+        left: 10px;
+      }
     }
   }
 
@@ -74,7 +101,6 @@
     padding-left: 2px;
 
     @include mobile {
-      flex-direction: column;
     }
 
 
@@ -117,8 +143,7 @@
     margin-right: auto;
 
     @include mobile {
-      padding: 8px 0 0;
-      margin: -10px auto 0 -4px;
+      margin: -8px auto 0 0;
     }
 
     &.menu-hide {
@@ -126,6 +151,10 @@
       transition: transform 0.3s;
 
       &:hover {
+        transform: translateY(0);
+      }
+
+      @include tablet {
         transform: translateY(0);
       }
     }
@@ -136,6 +165,11 @@
     padding-top: 2px;
 
     position: relative;
+
+    @include mobile {
+      padding-top: 0px;
+      padding-bottom: 2px;
+    }
   }
 
 
@@ -150,6 +184,13 @@
       position: absolute;
       content: "+";
       left: -13px;
+    }
+
+    @include mobile {
+      margin-left: 11px;
+      &:before {
+        display: none;
+      }
     }
   }
 

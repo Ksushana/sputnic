@@ -22,18 +22,43 @@
 .project {
   margin-top: 5px;
 
+  @include mobile {
+    margin-top: -3px;
+  }
+
   .row {
     margin: 0;
     font-size: 16px;
     line-height: 19px;
     font-feature-settings: 'ss04' on, 'case' on;
     color: #D2D2D2;
+
+    @include mobile {
+      font-size: 10px;
+    line-height: 12px;
+    }
   }
 
   .project__slider {
     margin-top: 52px;
     width: calc( 100% + 40px);
     margin-left: -20px;
+
+    @include mobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
+
+      .swiper-button-next, .swiper-button-prev {
+        display: none;
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    @include mobile {
+      display: block;
+    }
   }
 
   .swiper-slide {
@@ -41,8 +66,17 @@
     width: auto;
     margin-left: 20px;
 
+    @include mobile {
+      height: auto;
+      margin-left: 0;
+    }
+
     img {
       height: 680px;
+
+      @include mobile {
+        height: auto;
+      }
     }
   }
 

@@ -2,5 +2,25 @@
   &__text {
     margin-bottom: 31px;
     margin-top: 18px;
+
+    @include mobile {
+      margin-top: 12px;
+      margin-bottom: 18px;
+    }
+  }
+
+  @include mobile {
+    .centered-block {
+      padding-left: 78px;
+      min-height: auto;
+
+      h2 {
+        padding-bottom: 14px;
+      }
+
+      li {
+        line-height: 21px;
+      }
+    }
   }
 }

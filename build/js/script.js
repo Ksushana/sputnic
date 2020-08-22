@@ -18799,26 +18799,33 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
   var mySwiper = new Swiper('.product__slider', {
     speed: 400,
     slidesPerView: 1,
-    spaceBetween: 20,
+
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      768: {
+        spaceBetween: 20,
+      }
+    }
   });
 })();
 
 (function () {
-  var mySwiper = new Swiper('.project__slider', {
-    speed: 400,
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+  if (!window.isMobile()) {
+    var mySwiper = new Swiper('.project__slider', {
+      speed: 400,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
 })();
 
 $(function() {

@@ -53,14 +53,14 @@ html( lang="ru" )
       block content
 
     footer
-      .footer.sputnik-footer
+      .footer.sputnik-footer(class=(isMain ? 'main-footer' : null))
         .row
           .footer-lang
             a(href="/en") EN
             a(href="/ru" aria-current="page") RU
           .footer-menu-wrapper
             ul.footer-menu
-              li.footer-menu-item
+              li.footer-menu-item.footer-menu-item--exceptmobile(class=(isMain ? null : 'display-none'))
                 a( target="blank" title="контакты" href="./contacts.html" class=(isContacts ? 'active-link' : null)) контакты
               li.footer-menu-item
                 a( target="blank" title="ИНФОРМАЦИЯ" href="./information.html" class=(isInformation ? 'active-link' : null)) ИНФОРМАЦИЯ
@@ -68,6 +68,8 @@ html( lang="ru" )
                 a( target="blank" title="корпоративные заказы" href="./corporate.html" class=(isCorporate ? 'active-link' : null)) корпоративные заказы
           .social-menu-block
             ul.social-menu
+              li.footer-menu-item.footer-menu-item--onlymobile(class=(isMain ? 'display-none' : null) class=(isContacts ? 'active-link' : null))
+                a( target="blank" title="контакты" href="./contacts.html" ) контакты
               li.social-menu-item
                 a.social-menu-link( target="blank" title="instagram" href="http://instagram.com/") instagram
               li.social-menu-item

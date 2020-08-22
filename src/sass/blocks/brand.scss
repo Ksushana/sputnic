@@ -23,6 +23,15 @@
     width: 100%;
     height: auto;
     margin-top: 46px;
+
+    @include mobile {
+      margin-top: 31px;
+
+      img {
+        height: 220px;
+        object-fit: cover;
+      }
+    }
   }
 
   ul {
@@ -35,8 +44,18 @@
     padding-left: 78px;
     max-width: 532px;
 
+    @include mobile {
+      padding-left: 0;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
     p {
       margin-bottom: 20px;
+
+      @include mobile {
+        margin-bottom: 14px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -54,8 +73,20 @@
     line-height: 19px;
     margin: 0 auto 50px;
 
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      font-size: 10px;
+      line-height: 12px;
+      margin: 0 auto 30px;
+
+    }
+
     &:first-child {
       padding-top: 50px;
+
+      @include mobile {
+        padding-top: 30px;
+      }
     }
 
     h2 {
@@ -63,6 +94,14 @@
       line-height: 19px;
       padding-left: 68.6%;
       font-weight: normal;
+
+      @include mobile {
+        font-size: 10px;
+        line-height: 12px;
+        padding-left: 0;
+        padding-bottom: 12px;
+      }
+
     }
   }
 }
