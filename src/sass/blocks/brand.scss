@@ -2,16 +2,21 @@
   margin-left: 10px;
   a   {
     margin-right: 12px;
-    opacity: 0.4;
+    color: #8F8F8F;
     transition: opacity 0.4s;
 
     &.active-link {
-      opacity: 1;
+      color: #302d2d;
     }
 
     &:hover {
-      opacity: 1;
+      color: #302d2d;
+      @include mobile {
+        color: #8F8F8F !important;
+      }
     }
+
+
   }
 }
 
@@ -102,6 +107,7 @@
         line-height: 12px;
         padding-left: 0;
         padding-bottom: 12px;
+        margin-left: 0;
       }
 
     }

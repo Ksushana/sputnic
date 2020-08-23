@@ -6,6 +6,11 @@
   padding-top: 8px;
   margin-bottom: 81px;
 
+  @include mobile {
+    margin-top: -2px;
+    padding-top: 0;
+  }
+
   .swiper-container {
     margin-right: 5px;
 
@@ -14,9 +19,7 @@
     }
   }
 
-  @include mobile {
-    margin-bottom: 17px;
-  }
+
   &__header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

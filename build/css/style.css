@@ -1225,14 +1225,14 @@ input {
   position: absolute;
   content: "(";
   top: 0;
-  left: -6px;
+  left: -3px;
 }
 
 .brackets:before {
   position: absolute;
   content: ")";
   top: 0;
-  right: -6px;
+  right: -3px;
 }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -11905,23 +11905,35 @@ input.co-input-field {
   margin-top: 11px;
 }
 
+@media (max-width: 785px) {
+  .project .collection-item__info {
+    margin-bottom: 17px;
+  }
+}
+
 .brand-list {
   margin-left: 10px;
 }
 
 .brand-list a {
   margin-right: 12px;
-  opacity: 0.4;
+  color: #8F8F8F;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
 
 .brand-list a.active-link {
-  opacity: 1;
+  color: #302d2d;
 }
 
 .brand-list a:hover {
-  opacity: 1;
+  color: #302d2d;
+}
+
+@media (max-width: 785px) {
+  .brand-list a:hover {
+    color: #8F8F8F !important;
+  }
 }
 
 .brand {
@@ -12017,6 +12029,7 @@ input.co-input-field {
     line-height: 12px;
     padding-left: 0;
     padding-bottom: 12px;
+    margin-left: 0;
   }
 }
 
@@ -12029,6 +12042,13 @@ input.co-input-field {
   margin-bottom: 81px;
 }
 
+@media (max-width: 785px) {
+  .product {
+    margin-top: -2px;
+    padding-top: 0;
+  }
+}
+
 .product .swiper-container {
   margin-right: 5px;
 }
@@ -12036,12 +12056,6 @@ input.co-input-field {
 @media (max-width: 785px) {
   .product .swiper-container {
     margin-right: 0;
-  }
-}
-
-@media (max-width: 785px) {
-  .product {
-    margin-bottom: 17px;
   }
 }
 

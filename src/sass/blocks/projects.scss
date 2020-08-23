@@ -86,5 +86,8 @@
 
   .collection-item__info {
     margin-top: 11px;
+    @include mobile {
+      margin-bottom: 17px;
+    }
   }
 }
