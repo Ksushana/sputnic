@@ -12,7 +12,7 @@ block content
     .product
       .product__header
         .product__header-slider
-          .product__slider.swiper-container
+          .product__slider.product__slider--1.swiper-container
             .swiper-wrapper
               .swiper-slide
                 .product__slide-block
@@ -31,6 +31,30 @@ block content
               .swiper-slide
                 .product__slide-block
                   img.grey(src="img/product-grey@1x.jpg" srcset="img/product-grey@2x.jpg 2x", alt="проект")
+                  .product__slide-info.row.flex-between
+                    span 01
+                    span /04
+            .swiper-button-prev
+            .swiper-button-next
+          .product__slider.product__slider--2.swiper-container.display-none-mob
+            .swiper-wrapper
+              .swiper-slide
+                .product__slide-block
+                  img.grey(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект")
+                  .product__slide-info.row.flex-between
+                    span 01
+                    span /04
+
+              .swiper-slide
+                .product__slide-block
+                  img.black(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект")
+                  .product__slide-info.row.flex-between
+                    span 01
+                    span /04
+
+              .swiper-slide
+                .product__slide-block
+                  img.black(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект")
                   .product__slide-info.row.flex-between
                     span 01
                     span /04

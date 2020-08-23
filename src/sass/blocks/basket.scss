@@ -105,6 +105,7 @@
   .counter {
     width: 9rem;
     height: 3rem;
+    margin-bottom: 3px;
 
     @include mobile {
       width: 75px;
@@ -138,12 +139,14 @@
     &.is-count-down {
       &::before {
         content: "(-)";
+        opacity: 0.5;
       }
     }
 
     &.is-count-up {
       &::before {
         content: "(+)";
+        opacity: 0.5;
       }
     }
   }

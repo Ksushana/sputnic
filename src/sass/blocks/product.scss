@@ -28,6 +28,7 @@
   &__header-slider {
     grid-area: f;
     margin-right: 10px;
+    display: flex;
 
     @include mobile {
       width: 100%;
@@ -35,10 +36,22 @@
   }
 
   &__slider {
-    .swiper-slide {
-      display: flex;
-      justify-content: space-between;
+    width: 50%;
 
+    @include mobile   {
+      width: 100%;
+    }
+
+
+    .swiper-slide {
+      // display: flex;
+      // justify-content: space-between;
+      width: 48%;
+      margin: 0 1%;
+
+      @include mobile {
+        margin: 0;
+      }
 
 
       .row {
@@ -58,7 +71,7 @@
   }
 
   &__slide-block {
-    width: 49%;
+    width: auto;
 
     @include mobile {
       width: 100%;
@@ -67,9 +80,11 @@
 
     img {
       height: 95.8%;
+      object-fit: cover;
+
 
       @include mobile {
-        height: 448px;
+        height: auto;
         object-fit: contain;
       }
     }

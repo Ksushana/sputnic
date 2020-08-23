@@ -82,9 +82,23 @@ a {
   display: none;
 }
 
+.display-none-mob {
+  @include mobile {
+    display: none;
+  }
+
+}
+
+.display-none-dt {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+
 .container {
   position: relative;
-  min-height: calc(100vh - 82px);
+  min-height: calc(100vh - 102px);
   display: flex;
   flex-direction: column;
   padding: 0 20px;

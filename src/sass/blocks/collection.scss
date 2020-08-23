@@ -15,6 +15,10 @@
   .collection-item {
     height: auto;
 
+    a {
+      display: block;
+    }
+
     @include mobile {
       margin-bottom: 31px;
     }
@@ -24,6 +28,7 @@
 
       &.row {
         margin: 10px 0 0;
+        min-height: 18px;
       }
 
       span:first-child {
