@@ -12073,6 +12073,10 @@ input.co-input-field {
   }
 }
 
+.product__slider .swiper-slide {
+  width: auto;
+}
+
 @media (max-width: 785px) {
   .product__slider .swiper-slide {
     margin: 0;
