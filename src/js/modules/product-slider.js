@@ -44,16 +44,12 @@
       activeSwiper = initSwiper(slider);
     };
 
-    $('.radio-label').first().on('click', (evt) => {
+    $('.radio-label').first().on('click', () => {
       showSlider(productSlider1);
-      $(evt.target).removeClass('inactive');
-      $('.radio-label').addClass('inactive');
     });
 
-    $('.radio-label').last().on('click', (evt) => {
+    $('.radio-label').last().on('click', () => {
       showSlider(productSlider2);
-      $(evt.target).removeClass('inactive');
-      $('.radio-label').addClass('inactive');
     });
 
     showSlider(productSlider1);
@@ -64,4 +60,14 @@
   } else {
     initDesktop();
   }
+
+  $('.radio-label').first().on('click', (evt) => {
+    $(evt.target).removeClass('inactive');
+    $('.radio-label').addClass('inactive');
+  });
+
+  $('.radio-label').last().on('click', (evt) => {
+    $(evt.target).removeClass('inactive');
+    $('.radio-label').addClass('inactive');
+  });
 })();
