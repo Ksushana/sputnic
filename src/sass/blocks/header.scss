@@ -1,6 +1,14 @@
 .sputnik-header {
   padding: 10px 20px;
 
+  .main-menu {
+    .catalog-menu li a {
+      &:hover {
+        color: #8F8F8F !important;
+      }
+    }
+  }
+
   @include mobile {
     padding: 7px 10px;
   }

@@ -52,6 +52,11 @@ a {
   opacity: 1;
   pointer-events: none;
   color: #302D2D;
+
+  &--touchable  {
+    pointer-events: auto;
+    color: #302D2D !important;
+  }
 }
 
 .visually-hidden {

@@ -3,6 +3,7 @@
 }
 
 .product {
+  padding-top: 8px;
   margin-bottom: 81px;
 
   .swiper-container {
@@ -78,6 +79,7 @@
 
   &__slide-block {
     width: auto;
+    height: 93%;
 
     @include mobile {
       width: 100%;
@@ -85,7 +87,7 @@
     }
 
     img {
-      height: 95.8%;
+      height: 100%;
       object-fit: cover;
 
 

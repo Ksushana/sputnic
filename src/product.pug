@@ -2,7 +2,7 @@ extends pug/layout.pug
 
 block variables
   - let title = 'Product';
-  - let isCollection = true;
+  //- - let isCollection = true;
   - let isProduct = true;
   - let isMenuHide = true;
 
@@ -40,23 +40,23 @@ block content
               .swiper-slide
                 .product__slide-block
                   img.grey(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект" width="453" height="680")
-                  .product__slide-info.row.flex-between
-                    span 01
-                    span /04
+                .product__slide-info.row.flex-between
+                  span 01
+                  span /04
 
               .swiper-slide
                 .product__slide-block
                   img.black(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект" width="453" height="680")
-                  .product__slide-info.row.flex-between
-                    span 01
-                    span /04
+                .product__slide-info.row.flex-between
+                  span 01
+                  span /04
 
               .swiper-slide
                 .product__slide-block
                   img.black(src="img/catalog1@1x.jpg" srcset="img/catalog1@2x.jpg 2x", alt="проект" width="453" height="680")
-                  .product__slide-info.row.flex-between
-                    span 01
-                    span /04
+                .product__slide-info.row.flex-between
+                  span 01
+                  span /04
 
             .swiper-button-next
         .product__info

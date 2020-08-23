@@ -24,9 +24,9 @@ html( lang="ru" )
         .catalog-menu-wrapper(class=(isMenuHide ? 'menu-hide' : null))
           ul.catalog-menu
             li.catalog-menu-item.menu-item
-              a( target="blank" title="КОЛЛЕКЦИЯ" href="./collection.html" class=(isCollection ? 'active-link' : null) class=(isMain ? 'dark' : null)) КОЛЛЕКЦИЯ
+              a( target="blank" title="КОЛЛЕКЦИЯ" href="./collection.html" class=(isCollection ? 'active-link' : null) class=(isProduct ? 'active-link--touchable' : null) class=(isMain ? 'dark' : null)) КОЛЛЕКЦИЯ
             li.catalog-menu-item.menu-item
-              a( target="blank" title="ПРОЕКТЫ" href="./projects.html" class=(isProjects ? 'active-link' : null) class=(isMain ? 'dark' : null)) ПРОЕКТЫ
+              a( target="blank" title="ПРОЕКТЫ" href="./projects.html" class=(isProjects ? 'active-link' : null) class=(isProject ? 'active-link--touchable' : null) class=(isMain ? 'dark' : null)) ПРОЕКТЫ
             li.catalog-menu-item.menu-item
               a( target="blank" title="БРЕНД" href="./brand.html" class=(isBrand ? 'active-link' : null) class=(isMain ? 'dark' : null)) БРЕНД
           .sub-menu(class=(isProject ? 'collection-name' : 'display-none'))
