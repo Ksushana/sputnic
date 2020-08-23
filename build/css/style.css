@@ -11912,6 +11912,7 @@ input.co-input-field {
   width: 100%;
   height: auto;
   margin-top: 46px;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 785px) {
@@ -11975,10 +11976,6 @@ input.co-input-field {
   }
 }
 
-.brand .brand__item:first-child {
-  padding-top: 50px;
-}
-
 @media (max-width: 785px) {
   .brand .brand__item:first-child {
     padding-top: 30px;
@@ -11988,7 +11985,8 @@ input.co-input-field {
 .brand .brand__item h2 {
   font-size: 16px;
   line-height: 19px;
-  padding-left: 68.6%;
+  margin-left: auto;
+  width: 216px;
   font-weight: normal;
 }
 
@@ -12058,7 +12056,6 @@ input.co-input-field {
 }
 
 .product__slider .swiper-slide {
-  width: 48%;
   margin: 0 1%;
 }
 
@@ -12520,6 +12517,15 @@ input.co-input-field {
 .centered-block ul {
   list-style: none;
   padding-left: 0;
+}
+
+.centered-block ul a {
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.centered-block ul a:hover {
+  color: #8F8F8F;
 }
 
 .information {

@@ -33,6 +33,7 @@
     line-height: 19px;
     padding-bottom: 7px;
 
+
     @include mobile {
       font-size: 10px;
       line-height: 12px;
@@ -43,5 +44,12 @@
   ul {
     list-style: none;
     padding-left: 0;
+
+    a {
+      transition: color 0.4s;
+      &:hover {
+        color: #8F8F8F;
+      }
+    }
   }
 }

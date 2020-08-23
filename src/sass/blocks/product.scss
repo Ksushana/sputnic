@@ -45,8 +45,8 @@
 
     .swiper-slide {
       // display: flex;
-      // justify-content: space-between;
-      width: 48%;
+      // flex-direction: column;
+      // // justify-content: space-between;
       margin: 0 1%;
 
       @include mobile {
