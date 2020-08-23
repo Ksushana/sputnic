@@ -17,6 +17,8 @@
 
     a {
       display: block;
+      height: 100%;
+      position: relative;
     }
 
     @include mobile {
@@ -79,7 +81,10 @@
 }
 
 .collection-item__info {
+  position: absolute;
+  width: 100%;
   @include mobile {
+    position: static;
     font-size: 10px;
     line-height: 12px;
   }

@@ -5,6 +5,14 @@
 .product {
   margin-bottom: 81px;
 
+  .swiper-container {
+    margin-right: 5px;
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
   @include mobile {
     margin-bottom: 17px;
   }
@@ -36,7 +44,8 @@
   }
 
   &__slider {
-    width: 50%;
+    width: 453px;
+
 
     @include mobile   {
       width: 100%;
@@ -44,10 +53,7 @@
 
 
     .swiper-slide {
-      // display: flex;
-      // flex-direction: column;
-      // // justify-content: space-between;
-      margin: 0 1%;
+
 
       @include mobile {
         margin: 0;

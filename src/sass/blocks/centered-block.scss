@@ -22,8 +22,18 @@
   &__block {
     margin-bottom: 40px;
 
+    @include tablet {
+      a {
+        font-size: 36px ;
+      }
+    }
+
     @include mobile {
       margin-bottom: 30px;
+
+      a {
+        font-size: 18px ;
+      }
     }
   }
 

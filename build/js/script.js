@@ -18796,23 +18796,32 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
 })();
 
 (function () {
-  var mySwiper = new Swiper('.product__slider', {
+  const swipers = new Swiper('.product__slider', {
     speed: 400,
     slidesPerView: 1,
 
     loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
     breakpoints: {
       768: {
         spaceBetween: 20,
+        slidesPerView: 1,
       }
     }
   });
 
+  $('.product__slider').last().addClass('display-none-mob');
 
+  const prevButton = $('.product__slider .swiper-button-prev').first();
+  const nextButton = $('.product__slider .swiper-button-next').first();
+
+  const slidePrev = () =>
+    swipers.forEach(swiper => swiper.slidePrev());
+
+  const slideNext = () =>
+    swipers.forEach(swiper => swiper.slideNext());
+
+  prevButton.on('click', slidePrev);
+  nextButton.on('click', slideNext);
 })();
 
 (function () {
@@ -18831,8 +18840,23 @@ n+=b;l.push(b);d.on("keydown keypress keyup input paste propertychange",{c:d,ind
 })();
 
 $(function() {
-  $(".radio-label").click(function(){
-    $(".radio-label").addClass("inactive")
+  const productSlider1 = $('.product__slider').first();
+  const productSlider2 = $('.product__slider').last();
+
+  const showMobile = (slider) => slider.removeClass('display-none-mob');
+  const hideMobile = (slider) => slider.addClass('display-none-mob');
+
+  $('.radio-label').click(function(){
+    $('.radio-label').addClass('inactive')
+  });
+
+  $('.radio-label').last().on('click', () => {
+    showMobile(productSlider1);
+    hideMobile(productSlider2);
+  });
+  $('.radio-label').first().on('click', () => {
+    showMobile(productSlider2);
+    hideMobile(productSlider1);
   });
 });
 var scroll = new SmoothScroll('a[href*="#"]');

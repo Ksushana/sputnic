@@ -1,19 +1,28 @@
 (function () {
-  var mySwiper = new Swiper('.product__slider', {
+  const swipers = new Swiper('.product__slider', {
     speed: 400,
     slidesPerView: 1,
 
     loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
     breakpoints: {
       768: {
         spaceBetween: 20,
+        slidesPerView: 1,
       }
     }
   });
 
+  $('.product__slider').last().addClass('display-none-mob');
 
+  const prevButton = $('.product__slider .swiper-button-prev').first();
+  const nextButton = $('.product__slider .swiper-button-next').first();
+
+  const slidePrev = () =>
+    swipers.forEach(swiper => swiper.slidePrev());
+
+  const slideNext = () =>
+    swipers.forEach(swiper => swiper.slideNext());
+
+  prevButton.on('click', slidePrev);
+  nextButton.on('click', slideNext);
 })();

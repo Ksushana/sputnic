@@ -103,7 +103,7 @@
   }
 
   .counter {
-    width: 9rem;
+    width: 10rem;
     height: 3rem;
     margin-bottom: 3px;
 
@@ -140,6 +140,7 @@
       &::before {
         content: "(-)";
         opacity: 0.5;
+        white-space: nowrap;
       }
     }
 
@@ -147,6 +148,7 @@
       &::before {
         content: "(+)";
         opacity: 0.5;
+
       }
     }
   }
